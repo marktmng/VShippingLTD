@@ -90,6 +90,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>VShippingdbDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="VShippingdbDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VShippingdbDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VShippingdbDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VShippingdbDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VShippingdbDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VShippingdbDataSet3.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CustomerMaintenanceForm.resx">
       <DependentUpon>CustomerMaintenanceForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -136,6 +151,39 @@
     </None>
     <None Include="VShippingdbDataSet.xss">
       <DependentUpon>VShippingdbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="VShippingdbDataSet1.xsc">
+      <DependentUpon>VShippingdbDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="VShippingdbDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VShippingdbDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VShippingdbDataSet1.xss">
+      <DependentUpon>VShippingdbDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="VShippingdbDataSet2.xsc">
+      <DependentUpon>VShippingdbDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="VShippingdbDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VShippingdbDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VShippingdbDataSet2.xss">
+      <DependentUpon>VShippingdbDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="VShippingdbDataSet3.xsc">
+      <DependentUpon>VShippingdbDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="VShippingdbDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VShippingdbDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VShippingdbDataSet3.xss">
+      <DependentUpon>VShippingdbDataSet3.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
