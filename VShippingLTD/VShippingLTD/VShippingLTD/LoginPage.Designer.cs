@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.lblUsername = new System.Windows.Forms.Label();
             this.lblPassword = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
@@ -39,7 +40,9 @@
             // lblUsername
             // 
             this.lblUsername.AutoSize = true;
+            this.lblUsername.BackColor = System.Drawing.Color.Transparent;
             this.lblUsername.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsername.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblUsername.Location = new System.Drawing.Point(549, 333);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(96, 24);
@@ -49,7 +52,9 @@
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
+            this.lblPassword.BackColor = System.Drawing.Color.Transparent;
             this.lblPassword.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPassword.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblPassword.Location = new System.Drawing.Point(549, 391);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(90, 24);
@@ -73,7 +78,7 @@
             // btnLogin
             // 
             this.btnLogin.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnLogin.Location = new System.Drawing.Point(689, 469);
+            this.btnLogin.Location = new System.Drawing.Point(714, 460);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(75, 40);
             this.btnLogin.TabIndex = 3;
@@ -84,7 +89,7 @@
             // btnExit
             // 
             this.btnExit.BackColor = System.Drawing.Color.Red;
-            this.btnExit.Location = new System.Drawing.Point(807, 469);
+            this.btnExit.Location = new System.Drawing.Point(832, 460);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 40);
             this.btnExit.TabIndex = 4;
@@ -97,6 +102,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1551, 766);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnLogin);
@@ -104,6 +111,7 @@
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblUsername);
+            this.DoubleBuffered = true;
             this.Name = "LoginForm";
             this.Text = "Login Page";
             this.ResumeLayout(false);
