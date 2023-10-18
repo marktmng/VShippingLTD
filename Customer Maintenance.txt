@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
@@ -40,40 +40,9 @@ namespace VShippingLTD
         }
 
         // Method to refresh the DataGridView
-        private void RefreshDataGridView(string searchTerm = null)
+        private void RefreshDataGridView()
         {
-            string cs = ConfigurationManager.ConnectionStrings["VShippingdbConnectionString"].ConnectionString;
-            using (SqlConnection objSqlConnection = new SqlConnection(cs))
-            {
-                try
-                {
-                    objSqlConnection.Open();
-                    string selectCommand = "SELECT * FROM Customers";
-
-                    if (!string.IsNullOrEmpty(searchTerm))
-                    {
-                        // Add a WHERE clause to filter by customer's first name or last name containing the search term.
-                        selectCommand += " WHERE FirstName LIKE @SearchTerm OR LastName LIKE @SearchTerm";
-                    }
-
-                    SqlCommand objSqlCommand = new SqlCommand(selectCommand, objSqlConnection);
-
-                    if (!string.IsNullOrEmpty(searchTerm))
-                    {
-                        // Add the search parameter if a search term is provided.
-                        objSqlCommand.Parameters.AddWithValue("@SearchTerm", "%" + searchTerm + "%");
-                    }
-
-                    SqlDataAdapter adapter = new SqlDataAdapter(objSqlCommand);
-                    DataTable dt = new DataTable();
-                    adapter.Fill(dt);
-                    cmDTGridView.DataSource = dt;
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error loading data: " + ex.Message);
-                }
-            }
+            this.customersTableAdapter.Fill(this.vShippingdbDataSet.Customers);
         }
 
         // add customer
@@ -222,12 +191,6 @@ namespace VShippingLTD
                     MessageBox.Show("Error removing customer: " + ex.Message);
                 }
             }
-        }
-
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            string searchTerm = txtSearch.Text;
-            RefreshDataGridView(searchTerm);
         }
     }
 }

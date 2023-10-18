@@ -114,11 +114,11 @@
             // 
             this.vsTitle.AutoSize = true;
             this.vsTitle.BackColor = System.Drawing.Color.Transparent;
-            this.vsTitle.Font = new System.Drawing.Font("Microsoft Tai Le", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vsTitle.Font = new System.Drawing.Font("Tahoma", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.vsTitle.ForeColor = System.Drawing.Color.White;
-            this.vsTitle.Location = new System.Drawing.Point(454, 586);
+            this.vsTitle.Location = new System.Drawing.Point(416, 586);
             this.vsTitle.Name = "vsTitle";
-            this.vsTitle.Size = new System.Drawing.Size(419, 51);
+            this.vsTitle.Size = new System.Drawing.Size(483, 53);
             this.vsTitle.TabIndex = 2;
             this.vsTitle.Text = "Victory Shipping LTD";
             // 
