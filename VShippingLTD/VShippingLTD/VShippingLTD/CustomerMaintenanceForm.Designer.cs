@@ -71,6 +71,9 @@
             this.lblFirstName = new System.Windows.Forms.Label();
             this.txtCustomerID = new System.Windows.Forms.TextBox();
             this.lblCustomerID = new System.Windows.Forms.Label();
+            this.vShippingdbDataSet5 = new VShippingLTD.VShippingdbDataSet5();
+            this.customersBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.customersTableAdapter4 = new VShippingLTD.VShippingdbDataSet5TableAdapters.CustomersTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vShippingdbDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource2)).BeginInit();
@@ -81,6 +84,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmDTGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vShippingdbDataSet5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource4)).BeginInit();
             this.SuspendLayout();
             // 
             // customersBindingSource3
@@ -179,6 +184,7 @@
             this.btnSearch.TabIndex = 21;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click_1);
             // 
             // txtSearch
             // 
@@ -244,6 +250,7 @@
             this.btnRemove.TabIndex = 35;
             this.btnRemove.Text = "Remove";
             this.btnRemove.UseVisualStyleBackColor = false;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click_1);
             // 
             // btnClear
             // 
@@ -255,6 +262,7 @@
             this.btnClear.TabIndex = 34;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click_1);
             // 
             // btnUpdate
             // 
@@ -266,6 +274,7 @@
             this.btnUpdate.TabIndex = 33;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click_1);
             // 
             // btnAdd
             // 
@@ -277,6 +286,7 @@
             this.btnAdd.TabIndex = 32;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click_1);
             // 
             // cmDTGridView
             // 
@@ -296,7 +306,7 @@
             this.phoneNumberDataGridViewTextBoxColumn,
             this.ReceiverName,
             this.ReceiverEmail});
-            this.cmDTGridView.DataSource = this.customersBindingSource3;
+            this.cmDTGridView.DataSource = this.customersBindingSource4;
             this.cmDTGridView.Location = new System.Drawing.Point(442, 40);
             this.cmDTGridView.Name = "cmDTGridView";
             this.cmDTGridView.ReadOnly = true;
@@ -304,6 +314,7 @@
             this.cmDTGridView.RowTemplate.Height = 24;
             this.cmDTGridView.Size = new System.Drawing.Size(912, 501);
             this.cmDTGridView.TabIndex = 36;
+            this.cmDTGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cmDTGridView_CellContentClick);
             // 
             // customerIDDataGridViewTextBoxColumn
             // 
@@ -458,6 +469,20 @@
             this.lblCustomerID.TabIndex = 15;
             this.lblCustomerID.Text = "Customer ID";
             // 
+            // vShippingdbDataSet5
+            // 
+            this.vShippingdbDataSet5.DataSetName = "VShippingdbDataSet5";
+            this.vShippingdbDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // customersBindingSource4
+            // 
+            this.customersBindingSource4.DataMember = "Customers";
+            this.customersBindingSource4.DataSource = this.vShippingdbDataSet5;
+            // 
+            // customersTableAdapter4
+            // 
+            this.customersTableAdapter4.ClearBeforeFill = true;
+            // 
             // CustomerMaintenanceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -480,6 +505,8 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmDTGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vShippingdbDataSet5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -527,5 +554,8 @@
         private System.Windows.Forms.Label lblFirstName;
         private System.Windows.Forms.TextBox txtCustomerID;
         private System.Windows.Forms.Label lblCustomerID;
+        private VShippingdbDataSet5 vShippingdbDataSet5;
+        private System.Windows.Forms.BindingSource customersBindingSource4;
+        private VShippingdbDataSet5TableAdapters.CustomersTableAdapter customersTableAdapter4;
     }
 }

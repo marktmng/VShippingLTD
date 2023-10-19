@@ -14,16 +14,7 @@ namespace VShippingLTD
 {
     public partial class CustomerMaintenanceForm : Form
     {
-        private void ClearControls()
-        {
-            txtCustomerID.Text = string.Empty;
-            txtFirstName.Text = "";
-            txtLastName.Text = "";
-            txtEmail.Text = "";
-            txtPhoneNumber.Text = "";
-            txtReceiverName.Text = "";
-            txtReceiverEmail.Text = "";
-        }
+        
 
         public CustomerMaintenanceForm()
         {
@@ -32,8 +23,11 @@ namespace VShippingLTD
 
         private void CustomerMaintenanceForm_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'vShippingdbDataSet5.Customers' table. You can move, or remove it, as needed.
+            this.customersTableAdapter4.Fill(this.vShippingdbDataSet5.Customers); // latest
+
             // TODO: This line of code loads data into the 'vShippingdbDataSet3.Customers' table. You can move, or remove it, as needed.
-            this.customersTableAdapter3.Fill(this.vShippingdbDataSet3.Customers);
+            //this.customersTableAdapter3.Fill(this.vShippingdbDataSet3.Customers);
             
             // Load data into the DataGridView
             RefreshDataGridView();
@@ -76,8 +70,28 @@ namespace VShippingLTD
             }
         }
 
-        // add customer
-        private void btnAdd_Click(object sender, EventArgs e)
+        
+        private void ClearControls()
+        {
+            txtCustomerID.Text = string.Empty;
+            txtFirstName.Text = "";
+            txtLastName.Text = "";
+            txtEmail.Text = "";
+            txtPhoneNumber.Text = "";
+            txtReceiverName.Text = "";
+            txtReceiverEmail.Text = "";
+        }
+
+        // search
+        private void btnSearch_Click_1(object sender, EventArgs e)
+        {
+            string searchTerm = txtSearch.Text;
+            RefreshDataGridView(searchTerm);
+
+        }
+
+        // add
+        private void btnAdd_Click_1(object sender, EventArgs e)
         {
             int customerId;
             if (!int.TryParse(txtCustomerID.Text, out customerId))
@@ -114,10 +128,10 @@ namespace VShippingLTD
             {
                 objSqlConnection.Close();
             }
-            //ClearControls();
+            ClearControls();
         }
 
-        private void cmDTGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void cmDTGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             txtCustomerID.Text = cmDTGridView.Rows[e.RowIndex].Cells[0].FormattedValue.ToString(); // customerID is in the first column (index 0).
             txtFirstName.Text = cmDTGridView.Rows[e.RowIndex].Cells[1].FormattedValue.ToString(); //  First Name is in the second column (index 1).
@@ -128,7 +142,7 @@ namespace VShippingLTD
             txtReceiverEmail.Text = cmDTGridView.Rows[e.RowIndex].Cells[6].FormattedValue.ToString(); //  Receiver Email is in the seventh column (index 6).
         }
 
-        // method
+        //update
         private void UpdateCustomer(int customerId, string firstName, string lastName, string email, string phoneNumber, string receiverName, string receiverEmail)
         {
             string cs = ConfigurationManager.ConnectionStrings["VShippingdbConnectionString"].ConnectionString;
@@ -161,8 +175,7 @@ namespace VShippingLTD
             }
         }
 
-        // Event handler for the "Update" button
-        private void btnUpdate_Click(object sender, EventArgs e)
+        private void btnUpdate_Click_1(object sender, EventArgs e)
         {
             int customerId;
             if (!int.TryParse(txtCustomerID.Text, out customerId))
@@ -181,12 +194,8 @@ namespace VShippingLTD
             UpdateCustomer(customerId, firstName, lastName, email, phoneNumber, receiverName, receiverEmail);
         }
 
-        private void btnClear_Click(object sender, EventArgs e)
-        {
-            ClearControls();
-        }
-
-        private void btnRemove_Click(object sender, EventArgs e)
+        //delete
+        private void btnRemove_Click_1(object sender, EventArgs e)
         {
             int customerId;
             if (!int.TryParse(txtCustomerID.Text, out customerId))
@@ -224,10 +233,12 @@ namespace VShippingLTD
             }
         }
 
-        private void btnSearch_Click(object sender, EventArgs e)
+        //clear
+        private void btnClear_Click_1(object sender, EventArgs e)
         {
-            string searchTerm = txtSearch.Text;
-            RefreshDataGridView(searchTerm);
+            ClearControls();
         }
+
+       
     }
 }
