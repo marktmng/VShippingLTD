@@ -18,7 +18,8 @@ namespace VShippingLTD
             InitializeComponent();
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        // login
+        private void btnLogin_Click_1(object sender, EventArgs e)
         {
             string username = txtUsername.Text;
             string password = txtPassword.Text;
@@ -57,7 +58,8 @@ namespace VShippingLTD
             }
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
+        // exit
+        private void btnExit_Click_1(object sender, EventArgs e)
         {
             // Display a message box for logout confirmation
             DialogResult result = MessageBox.Show("Are you sure you want to exit?", "Exit Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -66,6 +68,7 @@ namespace VShippingLTD
             {
                 Application.Exit(); // exit
             }
+
         }
     }
 }

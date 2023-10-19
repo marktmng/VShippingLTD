@@ -52,7 +52,7 @@
             this.Shipmentdt});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1382, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1382, 30);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -60,7 +60,7 @@
             // 
             this.cmMenu.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.cmMenu.Name = "cmMenu";
-            this.cmMenu.Size = new System.Drawing.Size(175, 24);
+            this.cmMenu.Size = new System.Drawing.Size(175, 26);
             this.cmMenu.Text = "Customer Maintenance";
             this.cmMenu.Click += new System.EventHandler(this.cmMenu_Click);
             // 
@@ -72,7 +72,7 @@
             this.Search});
             this.parcelMenu.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.parcelMenu.Name = "parcelMenu";
-            this.parcelMenu.Size = new System.Drawing.Size(62, 24);
+            this.parcelMenu.Size = new System.Drawing.Size(62, 26);
             this.parcelMenu.Text = "Parcel";
             // 
             // Entry
@@ -95,12 +95,13 @@
             // 
             this.Shipmentdt.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.Shipmentdt.Name = "Shipmentdt";
-            this.Shipmentdt.Size = new System.Drawing.Size(136, 24);
+            this.Shipmentdt.Size = new System.Drawing.Size(136, 26);
             this.Shipmentdt.Text = "Shipment Details";
             this.Shipmentdt.Click += new System.EventHandler(this.Shipmentdt_Click);
             // 
             // btnLogout
             // 
+            this.btnLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLogout.BackColor = System.Drawing.Color.Red;
             this.btnLogout.Location = new System.Drawing.Point(1302, 0);
             this.btnLogout.Name = "btnLogout";
@@ -112,18 +113,24 @@
             // 
             // vsTitle
             // 
+            this.vsTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.vsTitle.AutoSize = true;
             this.vsTitle.BackColor = System.Drawing.Color.Transparent;
             this.vsTitle.Font = new System.Drawing.Font("Tahoma", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.vsTitle.ForeColor = System.Drawing.Color.White;
             this.vsTitle.Location = new System.Drawing.Point(416, 586);
             this.vsTitle.Name = "vsTitle";
-            this.vsTitle.Size = new System.Drawing.Size(483, 53);
+            this.vsTitle.Size = new System.Drawing.Size(476, 52);
             this.vsTitle.TabIndex = 2;
             this.vsTitle.Text = "Victory Shipping LTD";
             // 
             // GIPHYBOX
             // 
+            this.GIPHYBOX.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.GIPHYBOX.Image = ((System.Drawing.Image)(resources.GetObject("GIPHYBOX.Image")));
             this.GIPHYBOX.Location = new System.Drawing.Point(385, 146);
             this.GIPHYBOX.Name = "GIPHYBOX";

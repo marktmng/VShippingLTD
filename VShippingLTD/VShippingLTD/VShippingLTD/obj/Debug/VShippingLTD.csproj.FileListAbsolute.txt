@@ -10,7 +10,7 @@ C:\GDIT-AIS\SOFT606 DAppDev\FinalDesktopApplication\VShippingLTD\VShippingLTD\VS
 C:\GDIT-AIS\SOFT606 DAppDev\FinalDesktopApplication\VShippingLTD\VShippingLTD\VShippingLTD\obj\Debug\VShippingLTD.exe
 C:\GDIT-AIS\SOFT606 DAppDev\FinalDesktopApplication\VShippingLTD\VShippingLTD\VShippingLTD\obj\Debug\VShippingLTD.pdb
 C:\GDIT-AIS\SOFT606 DAppDev\FinalDesktopApplication\VShippingLTD\VShippingLTD\VShippingLTD\obj\Debug\VShippingLTD.CustomerMaintenanceForm.resources
-C:\GDIT-AIS\SOFT606 DAppDev\FinalDesktopApplication\VShippingLTD\VShippingLTD\VShippingLTD\obj\Debug\VShippingLTD.EntryForm.resources
 C:\GDIT-AIS\SOFT606 DAppDev\FinalDesktopApplication\VShippingLTD\VShippingLTD\VShippingLTD\obj\Debug\VShippingLTD.SearchForm.resources
 C:\GDIT-AIS\SOFT606 DAppDev\FinalDesktopApplication\VShippingLTD\VShippingLTD\VShippingLTD\obj\Debug\VShippingLTD.ShipmentDetailsForm.resources
 C:\GDIT-AIS\SOFT606 DAppDev\FinalDesktopApplication\VShippingLTD\VShippingLTD\VShippingLTD\obj\Debug\VShippingLTD.HomeForm.resources
+C:\GDIT-AIS\SOFT606 DAppDev\FinalDesktopApplication\VShippingLTD\VShippingLTD\VShippingLTD\obj\Debug\VShippingLTD.ParcelEntryForm.resources

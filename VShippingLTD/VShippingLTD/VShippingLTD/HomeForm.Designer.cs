@@ -39,6 +39,9 @@
             // 
             // hmAnim
             // 
+            this.hmAnim.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.hmAnim.Image = ((System.Drawing.Image)(resources.GetObject("hmAnim.Image")));
             this.hmAnim.Location = new System.Drawing.Point(37, 58);
             this.hmAnim.Name = "hmAnim";
@@ -51,12 +54,13 @@
             // 
             this.searchBar.Location = new System.Drawing.Point(37, 30);
             this.searchBar.Name = "searchBar";
-            this.searchBar.Size = new System.Drawing.Size(587, 22);
+            this.searchBar.Size = new System.Drawing.Size(789, 22);
             this.searchBar.TabIndex = 1;
             this.searchBar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // Lgn
             // 
+            this.Lgn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Lgn.BackColor = System.Drawing.SystemColors.Highlight;
             this.Lgn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lgn.Location = new System.Drawing.Point(1087, 20);
@@ -69,6 +73,7 @@
             // 
             // btnext
             // 
+            this.btnext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnext.BackColor = System.Drawing.Color.Red;
             this.btnext.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnext.Location = new System.Drawing.Point(1169, 20);
@@ -81,7 +86,7 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(630, 27);
+            this.btnSearch.Location = new System.Drawing.Point(832, 28);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(60, 27);
             this.btnSearch.TabIndex = 2;

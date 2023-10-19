@@ -39,7 +39,7 @@ namespace VShippingLTD
 
         private void Entry_Click(object sender, EventArgs e)
         {
-            EntryForm entryform = new EntryForm();
+            ParcelEntryForm entryform = new ParcelEntryForm();
             entryform.ShowDialog(); //show data entry form
         }
 
