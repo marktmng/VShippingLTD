@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerMaintenanceForm));
             this.customersBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.vShippingdbDataSet3 = new VShippingLTD.VShippingdbDataSet3();
             this.customersBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
@@ -61,6 +62,8 @@
             this.phoneNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ReceiverName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ReceiverEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customersBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.vShippingdbDataSet5 = new VShippingLTD.VShippingdbDataSet5();
             this.txtPhoneNumber = new System.Windows.Forms.TextBox();
             this.lblphNumber = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
@@ -71,9 +74,8 @@
             this.lblFirstName = new System.Windows.Forms.Label();
             this.txtCustomerID = new System.Windows.Forms.TextBox();
             this.lblCustomerID = new System.Windows.Forms.Label();
-            this.vShippingdbDataSet5 = new VShippingLTD.VShippingdbDataSet5();
-            this.customersBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.customersTableAdapter4 = new VShippingLTD.VShippingdbDataSet5TableAdapters.CustomersTableAdapter();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vShippingdbDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource2)).BeginInit();
@@ -84,8 +86,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmDTGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vShippingdbDataSet5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vShippingdbDataSet5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // customersBindingSource3
@@ -149,6 +152,7 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.btnSearch);
             this.panel1.Controls.Add(this.txtSearch);
             this.panel1.Controls.Add(this.txtReceiverEmail);
@@ -181,7 +185,7 @@
             this.btnSearch.Location = new System.Drawing.Point(354, 92);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(59, 27);
-            this.btnSearch.TabIndex = 21;
+            this.btnSearch.TabIndex = 2;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click_1);
@@ -191,7 +195,7 @@
             this.txtSearch.Location = new System.Drawing.Point(37, 95);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(311, 22);
-            this.txtSearch.TabIndex = 20;
+            this.txtSearch.TabIndex = 1;
             this.txtSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtReceiverEmail
@@ -200,7 +204,7 @@
             this.txtReceiverEmail.Location = new System.Drawing.Point(188, 447);
             this.txtReceiverEmail.Name = "txtReceiverEmail";
             this.txtReceiverEmail.Size = new System.Drawing.Size(225, 22);
-            this.txtReceiverEmail.TabIndex = 29;
+            this.txtReceiverEmail.TabIndex = 9;
             // 
             // txtReceiverName
             // 
@@ -208,7 +212,7 @@
             this.txtReceiverName.Location = new System.Drawing.Point(188, 400);
             this.txtReceiverName.Name = "txtReceiverName";
             this.txtReceiverName.Size = new System.Drawing.Size(225, 22);
-            this.txtReceiverName.TabIndex = 28;
+            this.txtReceiverName.TabIndex = 8;
             // 
             // lblReceiverEmail
             // 
@@ -234,7 +238,7 @@
             // 
             this.Title.AutoSize = true;
             this.Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Title.Location = new System.Drawing.Point(82, 40);
+            this.Title.Location = new System.Drawing.Point(93, 40);
             this.Title.Name = "Title";
             this.Title.Size = new System.Drawing.Size(235, 25);
             this.Title.TabIndex = 24;
@@ -247,7 +251,7 @@
             this.btnRemove.Location = new System.Drawing.Point(325, 504);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(78, 37);
-            this.btnRemove.TabIndex = 35;
+            this.btnRemove.TabIndex = 13;
             this.btnRemove.Text = "Remove";
             this.btnRemove.UseVisualStyleBackColor = false;
             this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click_1);
@@ -259,7 +263,7 @@
             this.btnClear.Location = new System.Drawing.Point(225, 504);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(78, 37);
-            this.btnClear.TabIndex = 34;
+            this.btnClear.TabIndex = 12;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click_1);
@@ -271,7 +275,7 @@
             this.btnUpdate.Location = new System.Drawing.Point(125, 504);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(78, 37);
-            this.btnUpdate.TabIndex = 33;
+            this.btnUpdate.TabIndex = 11;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click_1);
@@ -283,7 +287,7 @@
             this.btnAdd.Location = new System.Drawing.Point(25, 504);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(78, 37);
-            this.btnAdd.TabIndex = 32;
+            this.btnAdd.TabIndex = 10;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click_1);
@@ -313,7 +317,7 @@
             this.cmDTGridView.RowHeadersWidth = 51;
             this.cmDTGridView.RowTemplate.Height = 24;
             this.cmDTGridView.Size = new System.Drawing.Size(912, 501);
-            this.cmDTGridView.TabIndex = 36;
+            this.cmDTGridView.TabIndex = 14;
             this.cmDTGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cmDTGridView_CellContentClick);
             // 
             // customerIDDataGridViewTextBoxColumn
@@ -379,13 +383,23 @@
             this.ReceiverEmail.ReadOnly = true;
             this.ReceiverEmail.Width = 125;
             // 
+            // customersBindingSource4
+            // 
+            this.customersBindingSource4.DataMember = "Customers";
+            this.customersBindingSource4.DataSource = this.vShippingdbDataSet5;
+            // 
+            // vShippingdbDataSet5
+            // 
+            this.vShippingdbDataSet5.DataSetName = "VShippingdbDataSet5";
+            this.vShippingdbDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // txtPhoneNumber
             // 
             this.txtPhoneNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtPhoneNumber.Location = new System.Drawing.Point(188, 353);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.Size = new System.Drawing.Size(225, 22);
-            this.txtPhoneNumber.TabIndex = 27;
+            this.txtPhoneNumber.TabIndex = 7;
             // 
             // lblphNumber
             // 
@@ -403,7 +417,7 @@
             this.txtEmail.Location = new System.Drawing.Point(188, 306);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(225, 22);
-            this.txtEmail.TabIndex = 26;
+            this.txtEmail.TabIndex = 6;
             // 
             // lblEmail
             // 
@@ -421,7 +435,7 @@
             this.txtLastName.Location = new System.Drawing.Point(188, 259);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(225, 22);
-            this.txtLastName.TabIndex = 25;
+            this.txtLastName.TabIndex = 5;
             // 
             // lblLastName
             // 
@@ -439,7 +453,7 @@
             this.txtFirstName.Location = new System.Drawing.Point(188, 212);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(225, 22);
-            this.txtFirstName.TabIndex = 23;
+            this.txtFirstName.TabIndex = 4;
             // 
             // lblFirstName
             // 
@@ -457,7 +471,7 @@
             this.txtCustomerID.Location = new System.Drawing.Point(188, 165);
             this.txtCustomerID.Name = "txtCustomerID";
             this.txtCustomerID.Size = new System.Drawing.Size(225, 22);
-            this.txtCustomerID.TabIndex = 22;
+            this.txtCustomerID.TabIndex = 3;
             // 
             // lblCustomerID
             // 
@@ -469,19 +483,19 @@
             this.lblCustomerID.TabIndex = 15;
             this.lblCustomerID.Text = "Customer ID";
             // 
-            // vShippingdbDataSet5
-            // 
-            this.vShippingdbDataSet5.DataSetName = "VShippingdbDataSet5";
-            this.vShippingdbDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // customersBindingSource4
-            // 
-            this.customersBindingSource4.DataMember = "Customers";
-            this.customersBindingSource4.DataSource = this.vShippingdbDataSet5;
-            // 
             // customersTableAdapter4
             // 
             this.customersTableAdapter4.ClearBeforeFill = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(37, 27);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(38, 38);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 32;
+            this.pictureBox1.TabStop = false;
             // 
             // CustomerMaintenanceForm
             // 
@@ -505,8 +519,9 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmDTGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vShippingdbDataSet5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vShippingdbDataSet5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -557,5 +572,6 @@
         private VShippingdbDataSet5 vShippingdbDataSet5;
         private System.Windows.Forms.BindingSource customersBindingSource4;
         private VShippingdbDataSet5TableAdapters.CustomersTableAdapter customersTableAdapter4;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

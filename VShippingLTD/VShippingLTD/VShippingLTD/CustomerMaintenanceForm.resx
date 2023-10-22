@@ -162,6 +162,36 @@
   <metadata name="customersTableAdapter3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>677, 58</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        RU5ErkJggg==
+</value>
+  </data>
   <metadata name="ReceiverName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -176,12 +206,15 @@
   </metadata>
   <metadata name="ReceiverEmail.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
+  </metadata>
+  <metadata name="customersBindingSource4.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1106, 58</value>
   </metadata>
   <metadata name="vShippingdbDataSet5.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>901, 58</value>
   </metadata>
-  <metadata name="customersBindingSource4.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1106, 58</value>
+  <metadata name="vShippingdbDataSet5.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>901, 58</value>
   </metadata>
   <metadata name="customersTableAdapter4.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 99</value>

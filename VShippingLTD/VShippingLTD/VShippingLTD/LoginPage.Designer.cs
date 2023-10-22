@@ -44,7 +44,7 @@
             this.btnExit.Location = new System.Drawing.Point(874, 464);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(69, 35);
-            this.btnExit.TabIndex = 16;
+            this.btnExit.TabIndex = 4;
             this.btnExit.Text = "Exi&t";
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click_1);
@@ -55,7 +55,7 @@
             this.btnLogin.Location = new System.Drawing.Point(792, 464);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(69, 35);
-            this.btnLogin.TabIndex = 15;
+            this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "Log&in";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click_1);
@@ -68,7 +68,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '+';
             this.txtPassword.Size = new System.Drawing.Size(305, 22);
-            this.txtPassword.TabIndex = 14;
+            this.txtPassword.TabIndex = 2;
             // 
             // txtUsername
             // 
@@ -77,7 +77,7 @@
             this.txtUsername.Location = new System.Drawing.Point(701, 340);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(305, 22);
-            this.txtUsername.TabIndex = 13;
+            this.txtUsername.TabIndex = 1;
             // 
             // lblPassword
             // 

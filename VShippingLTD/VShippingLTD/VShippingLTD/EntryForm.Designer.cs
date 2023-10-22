@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ParcelEntryForm));
             this.Panel = new System.Windows.Forms.Panel();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnClean = new System.Windows.Forms.Button();
@@ -60,10 +61,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.parcelsTableAdapter = new VShippingLTD.VShippingdbDataSet4TableAdapters.ParcelsTableAdapter();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.parceLDTGview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.parcelsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vShippingdbDataSet4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // Panel
@@ -71,6 +74,7 @@
             this.Panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.Panel.Controls.Add(this.pictureBox1);
             this.Panel.Controls.Add(this.btnDelete);
             this.Panel.Controls.Add(this.btnClean);
             this.Panel.Controls.Add(this.btnUpd);
@@ -103,7 +107,7 @@
             this.btnDelete.Location = new System.Drawing.Point(322, 555);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(78, 37);
-            this.btnDelete.TabIndex = 57;
+            this.btnDelete.TabIndex = 11;
             this.btnDelete.Text = "Remove";
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -115,7 +119,7 @@
             this.btnClean.Location = new System.Drawing.Point(228, 555);
             this.btnClean.Name = "btnClean";
             this.btnClean.Size = new System.Drawing.Size(78, 37);
-            this.btnClean.TabIndex = 56;
+            this.btnClean.TabIndex = 10;
             this.btnClean.Text = "Clear";
             this.btnClean.UseVisualStyleBackColor = false;
             this.btnClean.Click += new System.EventHandler(this.btnClean_Click);
@@ -127,7 +131,7 @@
             this.btnUpd.Location = new System.Drawing.Point(134, 555);
             this.btnUpd.Name = "btnUpd";
             this.btnUpd.Size = new System.Drawing.Size(78, 37);
-            this.btnUpd.TabIndex = 55;
+            this.btnUpd.TabIndex = 9;
             this.btnUpd.Text = "Update";
             this.btnUpd.UseVisualStyleBackColor = false;
             this.btnUpd.Click += new System.EventHandler(this.btnUpd_Click);
@@ -139,7 +143,7 @@
             this.btnInsert.Location = new System.Drawing.Point(40, 555);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(78, 37);
-            this.btnInsert.TabIndex = 54;
+            this.btnInsert.TabIndex = 8;
             this.btnInsert.Text = "Add";
             this.btnInsert.UseVisualStyleBackColor = false;
             this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
@@ -166,7 +170,7 @@
             this.parceLDTGview.RowHeadersWidth = 51;
             this.parceLDTGview.RowTemplate.Height = 24;
             this.parceLDTGview.Size = new System.Drawing.Size(881, 569);
-            this.parceLDTGview.TabIndex = 53;
+            this.parceLDTGview.TabIndex = 12;
             this.parceLDTGview.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.parceLDTGview_CellContentClick);
             // 
             // parcelIDDataGridViewTextBoxColumn
@@ -241,7 +245,7 @@
             this.txtWeight.Location = new System.Drawing.Point(205, 467);
             this.txtWeight.Name = "txtWeight";
             this.txtWeight.Size = new System.Drawing.Size(195, 22);
-            this.txtWeight.TabIndex = 52;
+            this.txtWeight.TabIndex = 7;
             // 
             // txtAddress
             // 
@@ -249,7 +253,7 @@
             this.txtAddress.Location = new System.Drawing.Point(205, 421);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(195, 22);
-            this.txtAddress.TabIndex = 51;
+            this.txtAddress.TabIndex = 6;
             // 
             // txtPrice
             // 
@@ -257,7 +261,7 @@
             this.txtPrice.Location = new System.Drawing.Point(205, 375);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(195, 22);
-            this.txtPrice.TabIndex = 49;
+            this.txtPrice.TabIndex = 5;
             // 
             // txtParcelDes
             // 
@@ -265,7 +269,7 @@
             this.txtParcelDes.Location = new System.Drawing.Point(205, 329);
             this.txtParcelDes.Name = "txtParcelDes";
             this.txtParcelDes.Size = new System.Drawing.Size(195, 22);
-            this.txtParcelDes.TabIndex = 48;
+            this.txtParcelDes.TabIndex = 4;
             // 
             // txtParcelName
             // 
@@ -273,7 +277,7 @@
             this.txtParcelName.Location = new System.Drawing.Point(205, 283);
             this.txtParcelName.Name = "txtParcelName";
             this.txtParcelName.Size = new System.Drawing.Size(195, 22);
-            this.txtParcelName.TabIndex = 47;
+            this.txtParcelName.TabIndex = 3;
             // 
             // txtCustID
             // 
@@ -281,7 +285,7 @@
             this.txtCustID.Location = new System.Drawing.Point(205, 237);
             this.txtCustID.Name = "txtCustID";
             this.txtCustID.Size = new System.Drawing.Size(195, 22);
-            this.txtCustID.TabIndex = 46;
+            this.txtCustID.TabIndex = 2;
             // 
             // txtParcelID
             // 
@@ -289,13 +293,13 @@
             this.txtParcelID.Location = new System.Drawing.Point(205, 191);
             this.txtParcelID.Name = "txtParcelID";
             this.txtParcelID.Size = new System.Drawing.Size(195, 22);
-            this.txtParcelID.TabIndex = 45;
+            this.txtParcelID.TabIndex = 1;
             // 
             // Title
             // 
             this.Title.AutoSize = true;
             this.Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Title.Location = new System.Drawing.Point(35, 89);
+            this.Title.Location = new System.Drawing.Point(122, 96);
             this.Title.Name = "Title";
             this.Title.Size = new System.Drawing.Size(84, 25);
             this.Title.TabIndex = 50;
@@ -375,6 +379,16 @@
             // 
             this.parcelsTableAdapter.ClearBeforeFill = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(40, 71);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(63, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 51;
+            this.pictureBox1.TabStop = false;
+            // 
             // ParcelEntryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -391,6 +405,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.parceLDTGview)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.parcelsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vShippingdbDataSet4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -428,5 +443,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn addressDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn weightDataGridViewTextBoxColumn;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
