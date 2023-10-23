@@ -80,6 +80,7 @@ namespace VShippingLTD
             txtPhoneNumber.Text = "";
             txtReceiverName.Text = "";
             txtReceiverEmail.Text = "";
+            txtSearch.Text = "";
         }
 
         // search
@@ -87,6 +88,7 @@ namespace VShippingLTD
         {
             string searchTerm = txtSearch.Text;
             RefreshDataGridView(searchTerm);
+            ClearControls();
 
         }
 

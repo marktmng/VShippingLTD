@@ -33,7 +33,6 @@
             this.cmMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.parcelMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.Entry = new System.Windows.Forms.ToolStripMenuItem();
-            this.Search = new System.Windows.Forms.ToolStripMenuItem();
             this.Shipmentdt = new System.Windows.Forms.ToolStripMenuItem();
             this.btnLogout = new System.Windows.Forms.Button();
             this.vsTitle = new System.Windows.Forms.Label();
@@ -52,7 +51,7 @@
             this.Shipmentdt});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1382, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1382, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -60,7 +59,7 @@
             // 
             this.cmMenu.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.cmMenu.Name = "cmMenu";
-            this.cmMenu.Size = new System.Drawing.Size(175, 26);
+            this.cmMenu.Size = new System.Drawing.Size(175, 24);
             this.cmMenu.Text = "Customer Maintenance";
             this.cmMenu.Click += new System.EventHandler(this.cmMenu_Click);
             // 
@@ -68,34 +67,25 @@
             // 
             this.parcelMenu.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.parcelMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.Entry,
-            this.Search});
+            this.Entry});
             this.parcelMenu.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.parcelMenu.Name = "parcelMenu";
-            this.parcelMenu.Size = new System.Drawing.Size(62, 26);
+            this.parcelMenu.Size = new System.Drawing.Size(62, 24);
             this.parcelMenu.Text = "Parcel";
             // 
             // Entry
             // 
             this.Entry.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.Entry.Name = "Entry";
-            this.Entry.Size = new System.Drawing.Size(136, 26);
+            this.Entry.Size = new System.Drawing.Size(224, 26);
             this.Entry.Text = "Entry";
             this.Entry.Click += new System.EventHandler(this.Entry_Click);
-            // 
-            // Search
-            // 
-            this.Search.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.Search.Name = "Search";
-            this.Search.Size = new System.Drawing.Size(136, 26);
-            this.Search.Text = "Search";
-            this.Search.Click += new System.EventHandler(this.Search_Click);
             // 
             // Shipmentdt
             // 
             this.Shipmentdt.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.Shipmentdt.Name = "Shipmentdt";
-            this.Shipmentdt.Size = new System.Drawing.Size(136, 26);
+            this.Shipmentdt.Size = new System.Drawing.Size(136, 24);
             this.Shipmentdt.Text = "Shipment Details";
             this.Shipmentdt.Click += new System.EventHandler(this.Shipmentdt_Click);
             // 
@@ -166,7 +156,6 @@
         private System.Windows.Forms.ToolStripMenuItem cmMenu;
         private System.Windows.Forms.ToolStripMenuItem parcelMenu;
         private System.Windows.Forms.ToolStripMenuItem Entry;
-        private System.Windows.Forms.ToolStripMenuItem Search;
         private System.Windows.Forms.ToolStripMenuItem Shipmentdt;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Label vsTitle;
