@@ -241,6 +241,9 @@ namespace VShippingLTD
             ClearControls();
         }
 
-       
+        private void btnext_Click(object sender, EventArgs e)
+        {
+            this.Close(); // close this app
+        }
     }
 }

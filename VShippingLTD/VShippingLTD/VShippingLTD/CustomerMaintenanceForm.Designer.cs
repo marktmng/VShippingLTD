@@ -43,14 +43,12 @@
             this.customersTableAdapter2 = new VShippingLTD.VShippingdbDataSet2TableAdapters.CustomersTableAdapter();
             this.customersTableAdapter3 = new VShippingLTD.VShippingdbDataSet3TableAdapters.CustomersTableAdapter();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.txtReceiverEmail = new System.Windows.Forms.TextBox();
             this.txtReceiverName = new System.Windows.Forms.TextBox();
             this.lblReceiverEmail = new System.Windows.Forms.Label();
             this.lblRecieverName = new System.Windows.Forms.Label();
-            this.Title = new System.Windows.Forms.Label();
             this.btnRemove = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
@@ -76,6 +74,10 @@
             this.txtCustomerID = new System.Windows.Forms.TextBox();
             this.lblCustomerID = new System.Windows.Forms.Label();
             this.customersTableAdapter4 = new VShippingLTD.VShippingdbDataSet5TableAdapters.CustomersTableAdapter();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.Title = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnext = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vShippingdbDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource2)).BeginInit();
@@ -85,10 +87,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.vShippingdbDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource1)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmDTGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vShippingdbDataSet5)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // customersBindingSource3
@@ -152,14 +155,13 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.btnSearch);
             this.panel1.Controls.Add(this.txtSearch);
             this.panel1.Controls.Add(this.txtReceiverEmail);
             this.panel1.Controls.Add(this.txtReceiverName);
             this.panel1.Controls.Add(this.lblReceiverEmail);
             this.panel1.Controls.Add(this.lblRecieverName);
-            this.panel1.Controls.Add(this.Title);
             this.panel1.Controls.Add(this.btnRemove);
             this.panel1.Controls.Add(this.btnClear);
             this.panel1.Controls.Add(this.btnUpdate);
@@ -177,22 +179,12 @@
             this.panel1.Controls.Add(this.lblCustomerID);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1379, 580);
+            this.panel1.Size = new System.Drawing.Size(1329, 580);
             this.panel1.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(37, 27);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(38, 38);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 32;
-            this.pictureBox1.TabStop = false;
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(334, 92);
+            this.btnSearch.Location = new System.Drawing.Point(444, 115);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(79, 27);
             this.btnSearch.TabIndex = 2;
@@ -202,35 +194,39 @@
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(37, 95);
+            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Location = new System.Drawing.Point(37, 116);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(291, 22);
+            this.txtSearch.Size = new System.Drawing.Size(401, 24);
             this.txtSearch.TabIndex = 1;
             this.txtSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtReceiverEmail
             // 
             this.txtReceiverEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtReceiverEmail.Location = new System.Drawing.Point(188, 447);
+            this.txtReceiverEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtReceiverEmail.Location = new System.Drawing.Point(240, 447);
             this.txtReceiverEmail.Name = "txtReceiverEmail";
-            this.txtReceiverEmail.Size = new System.Drawing.Size(225, 22);
+            this.txtReceiverEmail.Size = new System.Drawing.Size(283, 24);
             this.txtReceiverEmail.TabIndex = 9;
             // 
             // txtReceiverName
             // 
             this.txtReceiverName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtReceiverName.Location = new System.Drawing.Point(188, 400);
+            this.txtReceiverName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtReceiverName.Location = new System.Drawing.Point(240, 400);
             this.txtReceiverName.Name = "txtReceiverName";
-            this.txtReceiverName.Size = new System.Drawing.Size(225, 22);
+            this.txtReceiverName.Size = new System.Drawing.Size(283, 24);
             this.txtReceiverName.TabIndex = 8;
             // 
             // lblReceiverEmail
             // 
             this.lblReceiverEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblReceiverEmail.AutoSize = true;
+            this.lblReceiverEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblReceiverEmail.Location = new System.Drawing.Point(34, 453);
             this.lblReceiverEmail.Name = "lblReceiverEmail";
-            this.lblReceiverEmail.Size = new System.Drawing.Size(99, 16);
+            this.lblReceiverEmail.Size = new System.Drawing.Size(155, 25);
             this.lblReceiverEmail.TabIndex = 31;
             this.lblReceiverEmail.Text = "Receiver Email";
             // 
@@ -238,29 +234,21 @@
             // 
             this.lblRecieverName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblRecieverName.AutoSize = true;
+            this.lblRecieverName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRecieverName.Location = new System.Drawing.Point(34, 406);
             this.lblRecieverName.Name = "lblRecieverName";
-            this.lblRecieverName.Size = new System.Drawing.Size(102, 16);
+            this.lblRecieverName.Size = new System.Drawing.Size(158, 25);
             this.lblRecieverName.TabIndex = 30;
             this.lblRecieverName.Text = "Receiver Name";
-            // 
-            // Title
-            // 
-            this.Title.AutoSize = true;
-            this.Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Title.Location = new System.Drawing.Point(93, 40);
-            this.Title.Name = "Title";
-            this.Title.Size = new System.Drawing.Size(235, 25);
-            this.Title.TabIndex = 24;
-            this.Title.Text = "Customer Maintenance";
             // 
             // btnRemove
             // 
             this.btnRemove.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnRemove.BackColor = System.Drawing.Color.Red;
-            this.btnRemove.Location = new System.Drawing.Point(325, 504);
+            this.btnRemove.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemove.Location = new System.Drawing.Point(423, 504);
             this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(78, 37);
+            this.btnRemove.Size = new System.Drawing.Size(91, 37);
             this.btnRemove.TabIndex = 13;
             this.btnRemove.Text = "Remove";
             this.btnRemove.UseVisualStyleBackColor = false;
@@ -270,7 +258,8 @@
             // 
             this.btnClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnClear.BackColor = System.Drawing.Color.PaleGreen;
-            this.btnClear.Location = new System.Drawing.Point(225, 504);
+            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.Location = new System.Drawing.Point(307, 504);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(78, 37);
             this.btnClear.TabIndex = 12;
@@ -282,7 +271,8 @@
             // 
             this.btnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnUpdate.BackColor = System.Drawing.Color.PaleGreen;
-            this.btnUpdate.Location = new System.Drawing.Point(125, 504);
+            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.Location = new System.Drawing.Point(191, 504);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(78, 37);
             this.btnUpdate.TabIndex = 11;
@@ -294,7 +284,8 @@
             // 
             this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnAdd.BackColor = System.Drawing.Color.PaleGreen;
-            this.btnAdd.Location = new System.Drawing.Point(25, 504);
+            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.Location = new System.Drawing.Point(75, 504);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(78, 37);
             this.btnAdd.TabIndex = 10;
@@ -321,12 +312,13 @@
             this.ReceiverName,
             this.ReceiverEmail});
             this.cmDTGridView.DataSource = this.customersBindingSource4;
-            this.cmDTGridView.Location = new System.Drawing.Point(442, 40);
+            this.cmDTGridView.GridColor = System.Drawing.SystemColors.ActiveCaption;
+            this.cmDTGridView.Location = new System.Drawing.Point(562, 116);
             this.cmDTGridView.Name = "cmDTGridView";
             this.cmDTGridView.ReadOnly = true;
             this.cmDTGridView.RowHeadersWidth = 51;
             this.cmDTGridView.RowTemplate.Height = 24;
-            this.cmDTGridView.Size = new System.Drawing.Size(912, 501);
+            this.cmDTGridView.Size = new System.Drawing.Size(749, 425);
             this.cmDTGridView.TabIndex = 14;
             this.cmDTGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cmDTGridView_CellContentClick);
             // 
@@ -406,90 +398,100 @@
             // txtPhoneNumber
             // 
             this.txtPhoneNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtPhoneNumber.Location = new System.Drawing.Point(188, 353);
+            this.txtPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhoneNumber.Location = new System.Drawing.Point(240, 353);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
-            this.txtPhoneNumber.Size = new System.Drawing.Size(225, 22);
+            this.txtPhoneNumber.Size = new System.Drawing.Size(283, 24);
             this.txtPhoneNumber.TabIndex = 7;
             // 
             // lblphNumber
             // 
             this.lblphNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblphNumber.AutoSize = true;
+            this.lblphNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblphNumber.Location = new System.Drawing.Point(34, 359);
             this.lblphNumber.Name = "lblphNumber";
-            this.lblphNumber.Size = new System.Drawing.Size(97, 16);
+            this.lblphNumber.Size = new System.Drawing.Size(155, 25);
             this.lblphNumber.TabIndex = 19;
             this.lblphNumber.Text = "Phone Number";
             // 
             // txtEmail
             // 
             this.txtEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtEmail.Location = new System.Drawing.Point(188, 306);
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(240, 306);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(225, 22);
+            this.txtEmail.Size = new System.Drawing.Size(283, 24);
             this.txtEmail.TabIndex = 6;
             // 
             // lblEmail
             // 
             this.lblEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.Location = new System.Drawing.Point(34, 312);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(41, 16);
+            this.lblEmail.Size = new System.Drawing.Size(65, 25);
             this.lblEmail.TabIndex = 18;
             this.lblEmail.Text = "Email";
             // 
             // txtLastName
             // 
             this.txtLastName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtLastName.Location = new System.Drawing.Point(188, 259);
+            this.txtLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLastName.Location = new System.Drawing.Point(240, 259);
             this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(225, 22);
+            this.txtLastName.Size = new System.Drawing.Size(283, 24);
             this.txtLastName.TabIndex = 5;
             // 
             // lblLastName
             // 
             this.lblLastName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblLastName.AutoSize = true;
+            this.lblLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLastName.Location = new System.Drawing.Point(34, 265);
             this.lblLastName.Name = "lblLastName";
-            this.lblLastName.Size = new System.Drawing.Size(72, 16);
+            this.lblLastName.Size = new System.Drawing.Size(115, 25);
             this.lblLastName.TabIndex = 17;
             this.lblLastName.Text = "Last Name";
             // 
             // txtFirstName
             // 
             this.txtFirstName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtFirstName.Location = new System.Drawing.Point(188, 212);
+            this.txtFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFirstName.Location = new System.Drawing.Point(240, 212);
             this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(225, 22);
+            this.txtFirstName.Size = new System.Drawing.Size(283, 24);
             this.txtFirstName.TabIndex = 4;
             // 
             // lblFirstName
             // 
             this.lblFirstName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblFirstName.AutoSize = true;
+            this.lblFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFirstName.Location = new System.Drawing.Point(34, 218);
             this.lblFirstName.Name = "lblFirstName";
-            this.lblFirstName.Size = new System.Drawing.Size(72, 16);
+            this.lblFirstName.Size = new System.Drawing.Size(116, 25);
             this.lblFirstName.TabIndex = 16;
             this.lblFirstName.Text = "First Name";
             // 
             // txtCustomerID
             // 
             this.txtCustomerID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtCustomerID.Location = new System.Drawing.Point(188, 165);
+            this.txtCustomerID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCustomerID.Location = new System.Drawing.Point(240, 165);
             this.txtCustomerID.Name = "txtCustomerID";
-            this.txtCustomerID.Size = new System.Drawing.Size(225, 22);
+            this.txtCustomerID.Size = new System.Drawing.Size(283, 24);
             this.txtCustomerID.TabIndex = 3;
             // 
             // lblCustomerID
             // 
             this.lblCustomerID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblCustomerID.AutoSize = true;
+            this.lblCustomerID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCustomerID.Location = new System.Drawing.Point(34, 171);
             this.lblCustomerID.Name = "lblCustomerID";
-            this.lblCustomerID.Size = new System.Drawing.Size(80, 16);
+            this.lblCustomerID.Size = new System.Drawing.Size(132, 25);
             this.lblCustomerID.TabIndex = 15;
             this.lblCustomerID.Text = "Customer ID";
             // 
@@ -497,12 +499,59 @@
             // 
             this.customersTableAdapter4.ClearBeforeFill = true;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel2.Controls.Add(this.btnext);
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.Title);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1329, 106);
+            this.panel2.TabIndex = 32;
+            // 
+            // Title
+            // 
+            this.Title.AutoSize = true;
+            this.Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Title.Location = new System.Drawing.Point(106, 33);
+            this.Title.Name = "Title";
+            this.Title.Size = new System.Drawing.Size(374, 38);
+            this.Title.TabIndex = 33;
+            this.Title.Text = "Customer Maintenance";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(52, 27);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(36, 48);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 34;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnext
+            // 
+            this.btnext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnext.BackColor = System.Drawing.Color.Gold;
+            this.btnext.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnext.Location = new System.Drawing.Point(1231, 33);
+            this.btnext.Name = "btnext";
+            this.btnext.Size = new System.Drawing.Size(80, 32);
+            this.btnext.TabIndex = 35;
+            this.btnext.Text = "&Close";
+            this.btnext.UseVisualStyleBackColor = false;
+            this.btnext.Click += new System.EventHandler(this.btnext_Click);
+            // 
             // CustomerMaintenanceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1403, 604);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(1353, 604);
+            this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.Name = "CustomerMaintenanceForm";
             this.ShowIcon = false;
@@ -518,10 +567,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmDTGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vShippingdbDataSet5)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -546,7 +597,6 @@
         private System.Windows.Forms.TextBox txtReceiverName;
         private System.Windows.Forms.Label lblReceiverEmail;
         private System.Windows.Forms.Label lblRecieverName;
-        private System.Windows.Forms.Label Title;
         private System.Windows.Forms.Button btnRemove;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnUpdate;
@@ -572,6 +622,9 @@
         private VShippingdbDataSet5 vShippingdbDataSet5;
         private System.Windows.Forms.BindingSource customersBindingSource4;
         private VShippingdbDataSet5TableAdapters.CustomersTableAdapter customersTableAdapter4;
+        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label Title;
+        private System.Windows.Forms.Button btnext;
     }
 }

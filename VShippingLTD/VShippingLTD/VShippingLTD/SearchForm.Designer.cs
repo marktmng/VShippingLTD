@@ -36,6 +36,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1107, 548);
             this.Name = "SearchForm";
+            this.ShowIcon = false;
             this.Text = "Search";
             this.ResumeLayout(false);
 

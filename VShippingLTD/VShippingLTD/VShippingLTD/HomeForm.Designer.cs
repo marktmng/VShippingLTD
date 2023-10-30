@@ -45,13 +45,14 @@
             this.hmAnim.Image = ((System.Drawing.Image)(resources.GetObject("hmAnim.Image")));
             this.hmAnim.Location = new System.Drawing.Point(37, 58);
             this.hmAnim.Name = "hmAnim";
-            this.hmAnim.Size = new System.Drawing.Size(1212, 673);
+            this.hmAnim.Size = new System.Drawing.Size(1427, 779);
             this.hmAnim.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.hmAnim.TabIndex = 0;
             this.hmAnim.TabStop = false;
             // 
             // searchBar
             // 
+            this.searchBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchBar.Location = new System.Drawing.Point(37, 30);
             this.searchBar.Name = "searchBar";
             this.searchBar.Size = new System.Drawing.Size(789, 22);
@@ -63,7 +64,7 @@
             this.Lgn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Lgn.BackColor = System.Drawing.SystemColors.Highlight;
             this.Lgn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lgn.Location = new System.Drawing.Point(1087, 20);
+            this.Lgn.Location = new System.Drawing.Point(1338, 20);
             this.Lgn.Name = "Lgn";
             this.Lgn.Size = new System.Drawing.Size(76, 32);
             this.Lgn.TabIndex = 3;
@@ -76,7 +77,7 @@
             this.btnext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnext.BackColor = System.Drawing.Color.Red;
             this.btnext.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnext.Location = new System.Drawing.Point(1169, 20);
+            this.btnext.Location = new System.Drawing.Point(1420, 20);
             this.btnext.Name = "btnext";
             this.btnext.Size = new System.Drawing.Size(80, 32);
             this.btnext.TabIndex = 4;
@@ -88,7 +89,7 @@
             // 
             this.btnSearch.Location = new System.Drawing.Point(832, 28);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(60, 27);
+            this.btnSearch.Size = new System.Drawing.Size(72, 27);
             this.btnSearch.TabIndex = 2;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -98,14 +99,18 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1299, 743);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(1550, 849);
+            this.ControlBox = false;
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnext);
             this.Controls.Add(this.Lgn);
             this.Controls.Add(this.searchBar);
             this.Controls.Add(this.hmAnim);
             this.Name = "HomeForm";
+            this.ShowIcon = false;
             this.Text = "Home Page";
+            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.hmAnim)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

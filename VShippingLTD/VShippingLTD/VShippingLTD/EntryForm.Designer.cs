@@ -52,7 +52,6 @@
             this.txtParcelName = new System.Windows.Forms.TextBox();
             this.txtCustID = new System.Windows.Forms.TextBox();
             this.txtParcelID = new System.Windows.Forms.TextBox();
-            this.Title = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -61,11 +60,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.parcelsTableAdapter = new VShippingLTD.VShippingdbDataSet4TableAdapters.ParcelsTableAdapter();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Title = new System.Windows.Forms.Label();
+            this.btnext = new System.Windows.Forms.Button();
             this.Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.parceLDTGview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.parcelsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vShippingdbDataSet4)).BeginInit();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,7 +77,7 @@
             this.Panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Panel.Controls.Add(this.pictureBox1);
+            this.Panel.Controls.Add(this.panel1);
             this.Panel.Controls.Add(this.btnDelete);
             this.Panel.Controls.Add(this.btnClean);
             this.Panel.Controls.Add(this.btnUpd);
@@ -87,7 +90,6 @@
             this.Panel.Controls.Add(this.txtParcelName);
             this.Panel.Controls.Add(this.txtCustID);
             this.Panel.Controls.Add(this.txtParcelID);
-            this.Panel.Controls.Add(this.Title);
             this.Panel.Controls.Add(this.label7);
             this.Panel.Controls.Add(this.label6);
             this.Panel.Controls.Add(this.label5);
@@ -97,16 +99,17 @@
             this.Panel.Controls.Add(this.label1);
             this.Panel.Location = new System.Drawing.Point(12, 12);
             this.Panel.Name = "Panel";
-            this.Panel.Size = new System.Drawing.Size(1351, 670);
+            this.Panel.Size = new System.Drawing.Size(1183, 599);
             this.Panel.TabIndex = 0;
             // 
             // btnDelete
             // 
             this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnDelete.BackColor = System.Drawing.Color.Red;
-            this.btnDelete.Location = new System.Drawing.Point(322, 555);
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Location = new System.Drawing.Point(348, 511);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(78, 37);
+            this.btnDelete.Size = new System.Drawing.Size(85, 37);
             this.btnDelete.TabIndex = 11;
             this.btnDelete.Text = "Remove";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -116,7 +119,8 @@
             // 
             this.btnClean.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnClean.BackColor = System.Drawing.Color.PaleGreen;
-            this.btnClean.Location = new System.Drawing.Point(228, 555);
+            this.btnClean.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClean.Location = new System.Drawing.Point(256, 511);
             this.btnClean.Name = "btnClean";
             this.btnClean.Size = new System.Drawing.Size(78, 37);
             this.btnClean.TabIndex = 10;
@@ -128,7 +132,8 @@
             // 
             this.btnUpd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnUpd.BackColor = System.Drawing.Color.PaleGreen;
-            this.btnUpd.Location = new System.Drawing.Point(134, 555);
+            this.btnUpd.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpd.Location = new System.Drawing.Point(164, 511);
             this.btnUpd.Name = "btnUpd";
             this.btnUpd.Size = new System.Drawing.Size(78, 37);
             this.btnUpd.TabIndex = 9;
@@ -140,7 +145,8 @@
             // 
             this.btnInsert.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnInsert.BackColor = System.Drawing.Color.PaleGreen;
-            this.btnInsert.Location = new System.Drawing.Point(40, 555);
+            this.btnInsert.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInsert.Location = new System.Drawing.Point(72, 511);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(78, 37);
             this.btnInsert.TabIndex = 8;
@@ -154,7 +160,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.parceLDTGview.AutoGenerateColumns = false;
-            this.parceLDTGview.BackgroundColor = System.Drawing.SystemColors.InactiveCaption;
+            this.parceLDTGview.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.parceLDTGview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.parceLDTGview.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.parcelIDDataGridViewTextBoxColumn,
@@ -165,11 +171,12 @@
             this.addressDataGridViewTextBoxColumn,
             this.weightDataGridViewTextBoxColumn});
             this.parceLDTGview.DataSource = this.parcelsBindingSource;
-            this.parceLDTGview.Location = new System.Drawing.Point(451, 46);
+            this.parceLDTGview.GridColor = System.Drawing.SystemColors.ActiveCaption;
+            this.parceLDTGview.Location = new System.Drawing.Point(500, 155);
             this.parceLDTGview.Name = "parceLDTGview";
             this.parceLDTGview.RowHeadersWidth = 51;
             this.parceLDTGview.RowTemplate.Height = 24;
-            this.parceLDTGview.Size = new System.Drawing.Size(881, 569);
+            this.parceLDTGview.Size = new System.Drawing.Size(651, 393);
             this.parceLDTGview.TabIndex = 12;
             this.parceLDTGview.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.parceLDTGview_CellContentClick);
             // 
@@ -242,76 +249,74 @@
             // txtWeight
             // 
             this.txtWeight.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtWeight.Location = new System.Drawing.Point(205, 467);
+            this.txtWeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtWeight.Location = new System.Drawing.Point(256, 453);
             this.txtWeight.Name = "txtWeight";
-            this.txtWeight.Size = new System.Drawing.Size(195, 22);
+            this.txtWeight.Size = new System.Drawing.Size(206, 24);
             this.txtWeight.TabIndex = 7;
             // 
             // txtAddress
             // 
             this.txtAddress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtAddress.Location = new System.Drawing.Point(205, 421);
+            this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddress.Location = new System.Drawing.Point(256, 407);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(195, 22);
+            this.txtAddress.Size = new System.Drawing.Size(206, 24);
             this.txtAddress.TabIndex = 6;
             // 
             // txtPrice
             // 
             this.txtPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtPrice.Location = new System.Drawing.Point(205, 375);
+            this.txtPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrice.Location = new System.Drawing.Point(256, 361);
             this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(195, 22);
+            this.txtPrice.Size = new System.Drawing.Size(206, 24);
             this.txtPrice.TabIndex = 5;
             // 
             // txtParcelDes
             // 
             this.txtParcelDes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtParcelDes.Location = new System.Drawing.Point(205, 329);
+            this.txtParcelDes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtParcelDes.Location = new System.Drawing.Point(256, 315);
             this.txtParcelDes.Name = "txtParcelDes";
-            this.txtParcelDes.Size = new System.Drawing.Size(195, 22);
+            this.txtParcelDes.Size = new System.Drawing.Size(206, 24);
             this.txtParcelDes.TabIndex = 4;
             // 
             // txtParcelName
             // 
             this.txtParcelName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtParcelName.Location = new System.Drawing.Point(205, 283);
+            this.txtParcelName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtParcelName.Location = new System.Drawing.Point(256, 269);
             this.txtParcelName.Name = "txtParcelName";
-            this.txtParcelName.Size = new System.Drawing.Size(195, 22);
+            this.txtParcelName.Size = new System.Drawing.Size(206, 24);
             this.txtParcelName.TabIndex = 3;
             // 
             // txtCustID
             // 
             this.txtCustID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtCustID.Location = new System.Drawing.Point(205, 237);
+            this.txtCustID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCustID.Location = new System.Drawing.Point(256, 223);
             this.txtCustID.Name = "txtCustID";
-            this.txtCustID.Size = new System.Drawing.Size(195, 22);
+            this.txtCustID.Size = new System.Drawing.Size(206, 24);
             this.txtCustID.TabIndex = 2;
             // 
             // txtParcelID
             // 
             this.txtParcelID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtParcelID.Location = new System.Drawing.Point(205, 191);
+            this.txtParcelID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtParcelID.Location = new System.Drawing.Point(256, 177);
             this.txtParcelID.Name = "txtParcelID";
-            this.txtParcelID.Size = new System.Drawing.Size(195, 22);
+            this.txtParcelID.Size = new System.Drawing.Size(206, 24);
             this.txtParcelID.TabIndex = 1;
-            // 
-            // Title
-            // 
-            this.Title.AutoSize = true;
-            this.Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Title.Location = new System.Drawing.Point(122, 96);
-            this.Title.Name = "Title";
-            this.Title.Size = new System.Drawing.Size(84, 25);
-            this.Title.TabIndex = 50;
-            this.Title.Text = "Parcels";
             // 
             // label7
             // 
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(37, 473);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(28, 459);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(49, 16);
+            this.label7.Size = new System.Drawing.Size(80, 25);
             this.label7.TabIndex = 43;
             this.label7.Text = "Weight";
             // 
@@ -319,9 +324,10 @@
             // 
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(37, 427);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(28, 413);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(58, 16);
+            this.label6.Size = new System.Drawing.Size(92, 25);
             this.label6.TabIndex = 42;
             this.label6.Text = "Address";
             // 
@@ -329,9 +335,10 @@
             // 
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(37, 335);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(28, 321);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(117, 16);
+            this.label5.Size = new System.Drawing.Size(187, 25);
             this.label5.TabIndex = 41;
             this.label5.Text = "Parcel Description";
             // 
@@ -339,9 +346,10 @@
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(37, 381);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(28, 367);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(38, 16);
+            this.label4.Size = new System.Drawing.Size(61, 25);
             this.label4.TabIndex = 40;
             this.label4.Text = "Price";
             // 
@@ -349,9 +357,10 @@
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(37, 289);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(28, 275);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(86, 16);
+            this.label3.Size = new System.Drawing.Size(135, 25);
             this.label3.TabIndex = 39;
             this.label3.Text = "Parcel Name";
             // 
@@ -359,9 +368,10 @@
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(37, 243);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(28, 229);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 16);
+            this.label2.Size = new System.Drawing.Size(132, 25);
             this.label2.TabIndex = 44;
             this.label2.Text = "Customer ID";
             // 
@@ -369,9 +379,10 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(37, 197);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(28, 183);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 16);
+            this.label1.Size = new System.Drawing.Size(100, 25);
             this.label1.TabIndex = 38;
             this.label1.Text = "Parcel ID";
             // 
@@ -379,22 +390,59 @@
             // 
             this.parcelsTableAdapter.ClearBeforeFill = true;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel1.Controls.Add(this.btnext);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.Title);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1183, 132);
+            this.panel1.TabIndex = 45;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(40, 71);
+            this.pictureBox1.Location = new System.Drawing.Point(33, 42);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(63, 50);
+            this.pictureBox1.Size = new System.Drawing.Size(64, 49);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 51;
+            this.pictureBox1.TabIndex = 53;
             this.pictureBox1.TabStop = false;
+            // 
+            // Title
+            // 
+            this.Title.AutoSize = true;
+            this.Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Title.Location = new System.Drawing.Point(106, 42);
+            this.Title.Name = "Title";
+            this.Title.Size = new System.Drawing.Size(167, 48);
+            this.Title.TabIndex = 52;
+            this.Title.Text = "Parcels";
+            // 
+            // btnext
+            // 
+            this.btnext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnext.BackColor = System.Drawing.Color.Gold;
+            this.btnext.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnext.Location = new System.Drawing.Point(1071, 53);
+            this.btnext.Name = "btnext";
+            this.btnext.Size = new System.Drawing.Size(80, 32);
+            this.btnext.TabIndex = 5;
+            this.btnext.Text = "&Close";
+            this.btnext.UseVisualStyleBackColor = false;
+            this.btnext.Click += new System.EventHandler(this.btnext_Click);
             // 
             // ParcelEntryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1386, 694);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(1218, 623);
+            this.ControlBox = false;
             this.Controls.Add(this.Panel);
             this.Name = "ParcelEntryForm";
             this.ShowIcon = false;
@@ -405,6 +453,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.parceLDTGview)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.parcelsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vShippingdbDataSet4)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -425,7 +475,6 @@
         private System.Windows.Forms.TextBox txtParcelName;
         private System.Windows.Forms.TextBox txtCustID;
         private System.Windows.Forms.TextBox txtParcelID;
-        private System.Windows.Forms.Label Title;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
@@ -443,6 +492,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn addressDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn weightDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label Title;
+        private System.Windows.Forms.Button btnext;
     }
 }

@@ -16,5 +16,10 @@ namespace VShippingLTD
         {
             InitializeComponent();
         }
+
+        private void btnext_Click(object sender, EventArgs e)
+        {
+            this.Close(); // close this form
+        }
     }
 }
