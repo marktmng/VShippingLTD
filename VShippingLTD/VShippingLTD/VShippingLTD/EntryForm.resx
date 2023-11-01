@@ -121,7 +121,7 @@
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAasAAAEyCAYAAABEeP/mAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAAQbxJREFUeF7tnQdYFdfWhmOjVxUp0gQ1RARbrhEL9t57oiIaNYlRY4wNg7FhbIma
+        vgAADr4B6kKxwAAAQbxJREFUeF7tnQdYFdfWhmOjVxUp0gQ1RARbrhEL9t57oiIaNYlRY4wNg7FhbIma
         RK8xxmBBYzSxtyio2HtvCQICFkRAelfvv3bu8f6EbBWUmdkz53uf5332OgeUOTOzz7S1134DAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIDKyMvLK5OVlWWQnp5unJKSYs7RAkJYKv6tXz16
         9MgyMzPTODc3t7yuOwIACpOdnV3hxo0bb4aFhbWcMWPG9EGDBq1v27btAW9v76u1a9e+7uXlde0Fsp+/
@@ -407,12 +407,6 @@
   </data>
   <metadata name="parcelsBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>222, 17</value>
-  </metadata>
-  <metadata name="parcelsBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>222, 17</value>
-  </metadata>
-  <metadata name="vShippingdbDataSet4.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
   </metadata>
   <metadata name="vShippingdbDataSet4.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>

@@ -32,8 +32,6 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.cmMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.parcelMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.Entry = new System.Windows.Forms.ToolStripMenuItem();
-            this.Shipmentdt = new System.Windows.Forms.ToolStripMenuItem();
             this.btnLogout = new System.Windows.Forms.Button();
             this.vsTitle = new System.Windows.Forms.Label();
             this.GIPHYBOX = new System.Windows.Forms.PictureBox();
@@ -47,8 +45,7 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cmMenu,
-            this.parcelMenu,
-            this.Shipmentdt});
+            this.parcelMenu});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1218, 35);
@@ -66,31 +63,13 @@
             // 
             // parcelMenu
             // 
-            this.parcelMenu.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.parcelMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.Entry});
+            this.parcelMenu.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.parcelMenu.Font = new System.Drawing.Font("Segoe UI Variable Text", 12F, System.Drawing.FontStyle.Bold);
             this.parcelMenu.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.parcelMenu.Name = "parcelMenu";
-            this.parcelMenu.Size = new System.Drawing.Size(83, 31);
-            this.parcelMenu.Text = "Parcel";
-            // 
-            // Entry
-            // 
-            this.Entry.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.Entry.Name = "Entry";
-            this.Entry.Size = new System.Drawing.Size(148, 32);
-            this.Entry.Text = "Entry";
-            this.Entry.Click += new System.EventHandler(this.Entry_Click);
-            // 
-            // Shipmentdt
-            // 
-            this.Shipmentdt.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.Shipmentdt.Font = new System.Drawing.Font("Segoe UI Variable Text", 12F, System.Drawing.FontStyle.Bold);
-            this.Shipmentdt.Name = "Shipmentdt";
-            this.Shipmentdt.Size = new System.Drawing.Size(188, 31);
-            this.Shipmentdt.Text = "Shipment Details";
-            this.Shipmentdt.Click += new System.EventHandler(this.Shipmentdt_Click);
+            this.parcelMenu.Size = new System.Drawing.Size(92, 31);
+            this.parcelMenu.Text = "Parcels";
+            this.parcelMenu.Click += new System.EventHandler(this.parcelMenu_Click);
             // 
             // btnLogout
             // 
@@ -159,8 +138,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem cmMenu;
         private System.Windows.Forms.ToolStripMenuItem parcelMenu;
-        private System.Windows.Forms.ToolStripMenuItem Entry;
-        private System.Windows.Forms.ToolStripMenuItem Shipmentdt;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Label vsTitle;
         private System.Windows.Forms.PictureBox GIPHYBOX;

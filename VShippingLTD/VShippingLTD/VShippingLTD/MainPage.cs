@@ -37,22 +37,11 @@ namespace VShippingLTD
             customerMaintenanceForm.ShowDialog(); //show customer maintenance
         }
 
-        private void Entry_Click(object sender, EventArgs e)
+        // parcel entry
+        private void parcelMenu_Click(object sender, EventArgs e)
         {
             ParcelEntryForm entryform = new ParcelEntryForm();
             entryform.ShowDialog(); //show data entry form
-        }
-
-        private void Search_Click(object sender, EventArgs e)
-        {
-            SearchForm searchform = new SearchForm();
-            searchform.ShowDialog(); //show search form
-        }
-
-        private void Shipmentdt_Click(object sender, EventArgs e)
-        {
-            ShipmentDetailsForm shipmentdtform = new ShipmentDetailsForm();
-            shipmentdtform.ShowDialog(); //show shipment details form
         }
     }
 }

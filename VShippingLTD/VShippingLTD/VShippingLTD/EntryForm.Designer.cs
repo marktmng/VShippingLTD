@@ -31,6 +31,10 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ParcelEntryForm));
             this.Panel = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnext = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Title = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnClean = new System.Windows.Forms.Button();
             this.btnUpd = new System.Windows.Forms.Button();
@@ -60,16 +64,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.parcelsTableAdapter = new VShippingLTD.VShippingdbDataSet4TableAdapters.ParcelsTableAdapter();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Title = new System.Windows.Forms.Label();
-            this.btnext = new System.Windows.Forms.Button();
             this.Panel.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.parceLDTGview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.parcelsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vShippingdbDataSet4)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // Panel
@@ -101,6 +101,51 @@
             this.Panel.Name = "Panel";
             this.Panel.Size = new System.Drawing.Size(1183, 599);
             this.Panel.TabIndex = 0;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel1.Controls.Add(this.btnext);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.Title);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1183, 132);
+            this.panel1.TabIndex = 45;
+            // 
+            // btnext
+            // 
+            this.btnext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnext.BackColor = System.Drawing.Color.Gold;
+            this.btnext.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnext.Location = new System.Drawing.Point(1071, 53);
+            this.btnext.Name = "btnext";
+            this.btnext.Size = new System.Drawing.Size(80, 32);
+            this.btnext.TabIndex = 5;
+            this.btnext.Text = "&Close";
+            this.btnext.UseVisualStyleBackColor = false;
+            this.btnext.Click += new System.EventHandler(this.btnext_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(33, 42);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(64, 49);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 53;
+            this.pictureBox1.TabStop = false;
+            // 
+            // Title
+            // 
+            this.Title.AutoSize = true;
+            this.Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Title.Location = new System.Drawing.Point(106, 42);
+            this.Title.Name = "Title";
+            this.Title.Size = new System.Drawing.Size(167, 48);
+            this.Title.TabIndex = 52;
+            this.Title.Text = "Parcels";
             // 
             // btnDelete
             // 
@@ -390,51 +435,6 @@
             // 
             this.parcelsTableAdapter.ClearBeforeFill = true;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.panel1.Controls.Add(this.btnext);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.Title);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1183, 132);
-            this.panel1.TabIndex = 45;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(33, 42);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(64, 49);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 53;
-            this.pictureBox1.TabStop = false;
-            // 
-            // Title
-            // 
-            this.Title.AutoSize = true;
-            this.Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Title.Location = new System.Drawing.Point(106, 42);
-            this.Title.Name = "Title";
-            this.Title.Size = new System.Drawing.Size(167, 48);
-            this.Title.TabIndex = 52;
-            this.Title.Text = "Parcels";
-            // 
-            // btnext
-            // 
-            this.btnext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnext.BackColor = System.Drawing.Color.Gold;
-            this.btnext.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnext.Location = new System.Drawing.Point(1071, 53);
-            this.btnext.Name = "btnext";
-            this.btnext.Size = new System.Drawing.Size(80, 32);
-            this.btnext.TabIndex = 5;
-            this.btnext.Text = "&Close";
-            this.btnext.UseVisualStyleBackColor = false;
-            this.btnext.Click += new System.EventHandler(this.btnext_Click);
-            // 
             // ParcelEntryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -450,12 +450,12 @@
             this.Load += new System.EventHandler(this.ParcelEntryForm_Load);
             this.Panel.ResumeLayout(false);
             this.Panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.parceLDTGview)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.parcelsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vShippingdbDataSet4)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.parceLDTGview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.parcelsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vShippingdbDataSet4)).EndInit();
             this.ResumeLayout(false);
 
         }
