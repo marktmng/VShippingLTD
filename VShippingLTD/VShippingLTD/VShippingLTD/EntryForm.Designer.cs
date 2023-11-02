@@ -446,7 +446,7 @@
             this.Controls.Add(this.Panel);
             this.Name = "ParcelEntryForm";
             this.ShowIcon = false;
-            this.Text = "Parcel Entry";
+            this.Text = "Parcel Entry Page";
             this.Load += new System.EventHandler(this.ParcelEntryForm_Load);
             this.Panel.ResumeLayout(false);
             this.Panel.PerformLayout();

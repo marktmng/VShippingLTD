@@ -124,7 +124,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainPage";
             this.ShowIcon = false;
-            this.Text = "Home";
+            this.Text = "Main Page";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GIPHYBOX)).EndInit();
