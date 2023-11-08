@@ -43,5 +43,11 @@ namespace VShippingLTD
             ParcelEntryForm entryform = new ParcelEntryForm();
             entryform.ShowDialog(); //show data entry form
         }
+
+        private void shipmentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShipmentDetailsForm sh = new ShipmentDetailsForm();
+            sh.ShowDialog(); // show shipment details form
+        }
     }
 }

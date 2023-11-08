@@ -35,6 +35,7 @@
             this.btnLogout = new System.Windows.Forms.Button();
             this.vsTitle = new System.Windows.Forms.Label();
             this.GIPHYBOX = new System.Windows.Forms.PictureBox();
+            this.shipmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GIPHYBOX)).BeginInit();
             this.SuspendLayout();
@@ -45,7 +46,8 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cmMenu,
-            this.parcelMenu});
+            this.parcelMenu,
+            this.shipmentToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1218, 35);
@@ -110,6 +112,15 @@
             this.GIPHYBOX.TabIndex = 3;
             this.GIPHYBOX.TabStop = false;
             // 
+            // shipmentToolStripMenuItem
+            // 
+            this.shipmentToolStripMenuItem.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.shipmentToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Variable Text", 12F, System.Drawing.FontStyle.Bold);
+            this.shipmentToolStripMenuItem.Name = "shipmentToolStripMenuItem";
+            this.shipmentToolStripMenuItem.Size = new System.Drawing.Size(116, 31);
+            this.shipmentToolStripMenuItem.Text = "Shipment";
+            this.shipmentToolStripMenuItem.Click += new System.EventHandler(this.shipmentToolStripMenuItem_Click);
+            // 
             // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -141,5 +152,6 @@
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Label vsTitle;
         private System.Windows.Forms.PictureBox GIPHYBOX;
+        private System.Windows.Forms.ToolStripMenuItem shipmentToolStripMenuItem;
     }
 }
