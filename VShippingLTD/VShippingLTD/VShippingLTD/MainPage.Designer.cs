@@ -125,6 +125,7 @@
             this.Name = "MainPage";
             this.ShowIcon = false;
             this.Text = "Main Page";
+            this.Load += new System.EventHandler(this.MainPage_Load_1);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GIPHYBOX)).EndInit();

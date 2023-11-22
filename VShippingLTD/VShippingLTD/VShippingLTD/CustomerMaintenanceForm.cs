@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace VShippingLTD
 {
@@ -244,6 +245,59 @@ namespace VShippingLTD
         private void btnext_Click(object sender, EventArgs e)
         {
             this.Close(); // close this app
+        }
+
+        // export
+        private void ExportToExcel(DataGridView dataGridView, string filePath)
+        {
+            // create new excel application
+            Excel.Application excelApp = new Excel.Application();
+            excelApp.Visible = true;
+
+            // create workbook
+            Excel.Workbook workbook = excelApp.Workbooks.Add();
+            Excel.Worksheet worksheet = workbook.Sheets[1];
+
+            // copy column headers and make them bold
+            for (int j = 0; j < dataGridView.Columns.Count; j++)
+            {
+                worksheet.Cells[1, j + 1] = dataGridView.Columns[j].HeaderText; // provides each columns name
+                worksheet.Cells[1, j + 1].font.bold = true; // header names bold
+            }
+
+            // copy data from our dataGridView to Excel
+
+            for (int i = 0; i < dataGridView.Rows.Count; i++) // iterates through all rows
+            {
+                for (int j = 0; j < dataGridView.Columns.Count; j++) // iterates through every column for a specific rows
+                {
+                    // the argument to add the data from our DTG to excel
+                    worksheet.Cells[i + 2, j + 1] = dataGridView.Rows[i].Cells[j].Value;
+
+                }
+            }
+
+            // save the workbook
+            workbook.SaveAs(filePath);
+
+            // clean up our resources - optional
+            workbook.Close();
+            excelApp.Quit();
+            System.Runtime.InteropServices.Marshal.ReleaseComObject(excelApp);
+        }
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "Excel File|*.xlsx";
+
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string filePath = saveFileDialog.FileName;
+                ExportToExcel(cmDTGridView, filePath); // mentioned datagridview
+
+                MessageBox.Show("File Exported");
+            }
         }
     }
 }

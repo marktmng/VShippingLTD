@@ -13,6 +13,7 @@ namespace VShippingLTD
 {
     public partial class LoginForm : Form
     {
+        RoleLogin db = new RoleLogin();
         public LoginForm()
         {
             InitializeComponent();
@@ -21,40 +22,39 @@ namespace VShippingLTD
         // login
         private void btnLogin_Click_1(object sender, EventArgs e)
         {
-            string username = txtUsername.Text;
-            string password = txtPassword.Text;
-
-            // Connection string SQL Server connection details
-            string connectionString = "Data Source=20220739-Mark;Initial Catalog=VShippingdb;Integrated Security=True";
-
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            try
             {
-                connection.Open();
-
-                // Define SQL query
-                string query = "SELECT COUNT(*) FROM Admins WHERE Username = @Username AND Password = @Password";
-
-                using (SqlCommand command = new SqlCommand(query, connection))
+                using (db.con)
                 {
-                    // Add parameters to prevent SQL injection
-                    command.Parameters.Add(new SqlParameter("@Username", username));
-                    command.Parameters.Add(new SqlParameter("@Password", password));
+                    SqlCommand cmd = new SqlCommand("spRoleLogin", db.con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    db.con.Open();
+                    cmd.Parameters.AddWithValue("@username", txtUsername.Text);
+                    cmd.Parameters.AddWithValue("@password", txtPassword.Text);
+                    SqlDataReader read = cmd.ExecuteReader();
 
-                    int count = Convert.ToInt32(command.ExecuteScalar());
+                    if (read.HasRows) // read condition
+                    {
+                        read.Read();
+                        if (read[2].ToString() == "Admin") // admin as a  receptionist role
+                        {
+                            RoleLogin.type = "A"; // assigned "A" for Admin/Receptionist
+                        }
+                        else if (read[2].ToString() == "Customer") // customer
+                        {
+                            RoleLogin.type = "C"; // assigned "C" for customer
+                        }
 
-                    if (count > 0)
-                    {
-                        // Successful login - open the main form
-                        MainPage mainpage = new MainPage();
-                        mainpage.Show();
-                        this.Hide(); // Hide the login form
-                    }
-                    else
-                    {
-                        // Display an error message for invalid credentials
-                        MessageBox.Show("Please Try Again!");
+                        MainPage mp = new MainPage();
+                        mp.Show();
+                        this.Hide();
                     }
                 }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
             }
         }
 

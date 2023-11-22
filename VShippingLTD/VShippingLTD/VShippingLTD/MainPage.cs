@@ -43,5 +43,19 @@ namespace VShippingLTD
             ParcelEntryForm entryform = new ParcelEntryForm();
             entryform.ShowDialog(); //show data entry form
         }
+
+        private void MainPage_Load_1(object sender, EventArgs e)
+        {
+            if (RoleLogin.type == "A") // receptionist/Admin
+            {
+                cmMenu.Visible = true;
+                parcelMenu.Visible = true;
+            }
+            else if (RoleLogin.type == "C") // customer
+            {
+                cmMenu.Visible = false;
+                parcelMenu.Visible = true;
+            }
+        }
     }
 }
