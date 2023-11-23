@@ -5,16 +5,17 @@ using System.Configuration;
 
 namespace VShippingLTD
 {
-    public class CustomerBLL
+    public class CustomerBLL // class
     {
         private string connectionString;
 
-        public CustomerBLL()
+        public CustomerBLL() // Business Logic and Data Access Layer
         {
             connectionString = ConfigurationManager.ConnectionStrings["VShippingdbConnectionString"].ConnectionString;
         }
 
-        public DataTable GetCustomers(string searchTerm = null)
+        // SQL Injection
+        public DataTable GetCustomers(string searchTerm = null)  // Encapsulation: The GetCustomers method encapsulates the logic to retrieve customer data.
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -43,7 +44,8 @@ namespace VShippingLTD
             }
         }
 
-        public bool AddCustomer(string firstName, string lastName, string email, string phoneNumber, string receiverName, string receiverEmail)
+        // Encapsulation: Add
+        public bool AddCustomer(string firstName, string lastName, string email, string phoneNumber, string receiverName, string receiverEmail) 
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -65,7 +67,8 @@ namespace VShippingLTD
             }
         }
 
-        public bool UpdateCustomer(int customerId, string firstName, string lastName, string email, string phoneNumber, string receiverName, string receiverEmail)
+        // Encapsulation: Update
+        public bool UpdateCustomer(int customerId, string firstName, string lastName, string email, string phoneNumber, string receiverName, string receiverEmail) 
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -88,7 +91,8 @@ namespace VShippingLTD
             }
         }
 
-        public bool DeleteCustomer(int customerId)
+        // Encapsulation: Delete
+        public bool DeleteCustomer(int customerId) 
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {

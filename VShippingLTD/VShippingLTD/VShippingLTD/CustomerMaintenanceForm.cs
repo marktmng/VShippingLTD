@@ -32,15 +32,15 @@ namespace VShippingLTD
             RefreshDataGridView();
         }
 
-        // Method to refresh the DataGridView
-        private void RefreshDataGridView(string searchTerm = null)
+        // Polymorphism: The RefreshDataGridView method is overloaded.
+        private void RefreshDataGridView(string searchTerm = null) 
         {
             DataTable dt = customerBLL.GetCustomers(searchTerm);
             cmDTGridView.DataSource = dt;
         }
 
         // search
-        private void btnSearch_Click_1(object sender, EventArgs e)
+        private void btnSearch_Click_1(object sender, EventArgs e)  // Polymorphism: The btnSearch_Click_1 method handles the click event with different parameters.
         {
             string searchTerm = txtSearch.Text;
             RefreshDataGridView(searchTerm);
