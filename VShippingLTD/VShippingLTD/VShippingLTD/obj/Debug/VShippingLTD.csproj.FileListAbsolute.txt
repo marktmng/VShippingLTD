@@ -28,3 +28,17 @@ C:\GDIT-AIS\SOFT606 DAppDev\Assignment 2\Redo\VShippingLTD\VShippingLTD\VShippin
 C:\GDIT-AIS\SOFT606 DAppDev\Assignment 2\Redo\VShippingLTD\VShippingLTD\VShippingLTD\VShippingLTD\obj\Debug\VShippingLTD.csproj.CoreCompileInputs.cache
 C:\GDIT-AIS\SOFT606 DAppDev\Assignment 2\Redo\VShippingLTD\VShippingLTD\VShippingLTD\VShippingLTD\obj\Debug\VShippingLTD.exe
 C:\GDIT-AIS\SOFT606 DAppDev\Assignment 2\Redo\VShippingLTD\VShippingLTD\VShippingLTD\VShippingLTD\obj\Debug\VShippingLTD.pdb
+C:\GDIT-AIS\SOFT606 DAppDev\Assignment 2\VShippingLTD\VShippingLTD\VShippingLTD\VShippingLTD\bin\Debug\VShippingLTD.exe.config
+C:\GDIT-AIS\SOFT606 DAppDev\Assignment 2\VShippingLTD\VShippingLTD\VShippingLTD\VShippingLTD\bin\Debug\VShippingLTD.exe
+C:\GDIT-AIS\SOFT606 DAppDev\Assignment 2\VShippingLTD\VShippingLTD\VShippingLTD\VShippingLTD\bin\Debug\VShippingLTD.pdb
+C:\GDIT-AIS\SOFT606 DAppDev\Assignment 2\VShippingLTD\VShippingLTD\VShippingLTD\VShippingLTD\obj\Debug\VShippingLTD.csproj.AssemblyReference.cache
+C:\GDIT-AIS\SOFT606 DAppDev\Assignment 2\VShippingLTD\VShippingLTD\VShippingLTD\VShippingLTD\obj\Debug\VShippingLTD.CustomerMaintenanceForm.resources
+C:\GDIT-AIS\SOFT606 DAppDev\Assignment 2\VShippingLTD\VShippingLTD\VShippingLTD\VShippingLTD\obj\Debug\VShippingLTD.ParcelEntryForm.resources
+C:\GDIT-AIS\SOFT606 DAppDev\Assignment 2\VShippingLTD\VShippingLTD\VShippingLTD\VShippingLTD\obj\Debug\VShippingLTD.HomeForm.resources
+C:\GDIT-AIS\SOFT606 DAppDev\Assignment 2\VShippingLTD\VShippingLTD\VShippingLTD\VShippingLTD\obj\Debug\VShippingLTD.LoginForm.resources
+C:\GDIT-AIS\SOFT606 DAppDev\Assignment 2\VShippingLTD\VShippingLTD\VShippingLTD\VShippingLTD\obj\Debug\VShippingLTD.MainPage.resources
+C:\GDIT-AIS\SOFT606 DAppDev\Assignment 2\VShippingLTD\VShippingLTD\VShippingLTD\VShippingLTD\obj\Debug\VShippingLTD.Properties.Resources.resources
+C:\GDIT-AIS\SOFT606 DAppDev\Assignment 2\VShippingLTD\VShippingLTD\VShippingLTD\VShippingLTD\obj\Debug\VShippingLTD.csproj.GenerateResource.cache
+C:\GDIT-AIS\SOFT606 DAppDev\Assignment 2\VShippingLTD\VShippingLTD\VShippingLTD\VShippingLTD\obj\Debug\VShippingLTD.csproj.CoreCompileInputs.cache
+C:\GDIT-AIS\SOFT606 DAppDev\Assignment 2\VShippingLTD\VShippingLTD\VShippingLTD\VShippingLTD\obj\Debug\VShippingLTD.exe
+C:\GDIT-AIS\SOFT606 DAppDev\Assignment 2\VShippingLTD\VShippingLTD\VShippingLTD\VShippingLTD\obj\Debug\VShippingLTD.pdb

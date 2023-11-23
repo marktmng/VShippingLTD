@@ -88,6 +88,8 @@ namespace VShippingLTD
         private void btnSearch_Click(object sender, EventArgs e)
         {
             PerformSearch();
+            string searchTerm = searchBar.Text; // search by Parcel Name
+            RefreshDataGridView(searchTerm);
             parceLDTGview.Visible = true; // parcelDTGview visible
         }
 
@@ -98,8 +100,14 @@ namespace VShippingLTD
 
             // Hide the DataGridView when search bar is cleared
             parceLDTGview.Visible = false;
+
+            ClearControls();
         }
 
-
+        private void ClearControls()
+        {
+            // Clear the text boxes after inserting the parcel
+            searchBar.Text = "";
+        }
     }
 }
