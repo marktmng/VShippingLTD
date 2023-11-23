@@ -24,8 +24,6 @@ C:\GDIT-AIS\SOFT606 DAppDev\Assignment 2\Redo\VShippingLTD\VShippingLTD\VShippin
 C:\GDIT-AIS\SOFT606 DAppDev\Assignment 2\Redo\VShippingLTD\VShippingLTD\VShippingLTD\VShippingLTD\obj\Debug\VShippingLTD.LoginForm.resources
 C:\GDIT-AIS\SOFT606 DAppDev\Assignment 2\Redo\VShippingLTD\VShippingLTD\VShippingLTD\VShippingLTD\obj\Debug\VShippingLTD.MainPage.resources
 C:\GDIT-AIS\SOFT606 DAppDev\Assignment 2\Redo\VShippingLTD\VShippingLTD\VShippingLTD\VShippingLTD\obj\Debug\VShippingLTD.Properties.Resources.resources
-C:\GDIT-AIS\SOFT606 DAppDev\Assignment 2\Redo\VShippingLTD\VShippingLTD\VShippingLTD\VShippingLTD\obj\Debug\VShippingLTD.SearchForm.resources
-C:\GDIT-AIS\SOFT606 DAppDev\Assignment 2\Redo\VShippingLTD\VShippingLTD\VShippingLTD\VShippingLTD\obj\Debug\VShippingLTD.ShipmentDetailsForm.resources
 C:\GDIT-AIS\SOFT606 DAppDev\Assignment 2\Redo\VShippingLTD\VShippingLTD\VShippingLTD\VShippingLTD\obj\Debug\VShippingLTD.csproj.GenerateResource.cache
 C:\GDIT-AIS\SOFT606 DAppDev\Assignment 2\Redo\VShippingLTD\VShippingLTD\VShippingLTD\VShippingLTD\obj\Debug\VShippingLTD.csproj.CoreCompileInputs.cache
 C:\GDIT-AIS\SOFT606 DAppDev\Assignment 2\Redo\VShippingLTD\VShippingLTD\VShippingLTD\VShippingLTD\obj\Debug\VShippingLTD.exe

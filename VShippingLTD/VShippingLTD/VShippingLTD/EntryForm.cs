@@ -280,23 +280,12 @@ namespace VShippingLTD
             }
         }
 
-        // Expose a method to set the DataGridView data source
-        public void SetDataGridViewDataSource(DataTable dataTable)
-        {
-            parceLDTGview.DataSource = dataTable;
-        }
-
-        // Expose a method to perform search
-        public void PerformSearch(string searchTerm)
-        {
-            // Call the method in ParcelManager to get filtered data
-            DataTable filteredData = parcelManager.GetParcels(searchTerm);
-            SetDataGridViewDataSource(filteredData);
-        }
-
+        // button search
         private void btnSearch_Click(object sender, EventArgs e)
         {
-
+            string searchTerm = txtSearch.Text;
+            RefreshDataGridView(searchTerm);
+            ClearControls();
         }
     }
 }

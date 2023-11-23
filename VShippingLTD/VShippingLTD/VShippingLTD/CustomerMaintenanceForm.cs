@@ -26,9 +26,6 @@ namespace VShippingLTD
         {
             // TODO: This line of code loads data into the 'vShippingdbDataSet5.Customers' table. You can move, or remove it, as needed.
             this.customersTableAdapter4.Fill(this.vShippingdbDataSet5.Customers); // latest
-
-            // TODO: This line of code loads data into the 'vShippingdbDataSet3.Customers' table. You can move, or remove it, as needed.
-            //this.customersTableAdapter3.Fill(this.vShippingdbDataSet3.Customers);
             
             // Load data into the DataGridView
             RefreshDataGridView();
@@ -71,7 +68,16 @@ namespace VShippingLTD
             }
         }
 
-        
+        // search
+        private void btnSearch_Click_1(object sender, EventArgs e)
+        {
+            string searchTerm = txtSearch.Text;
+            RefreshDataGridView(searchTerm);
+            ClearControls();
+
+        }
+
+
         private void ClearControls()
         {
             txtCustomerID.Text = string.Empty;
@@ -84,14 +90,7 @@ namespace VShippingLTD
             txtSearch.Text = "";
         }
 
-        // search
-        private void btnSearch_Click_1(object sender, EventArgs e)
-        {
-            string searchTerm = txtSearch.Text;
-            RefreshDataGridView(searchTerm);
-            ClearControls();
-
-        }
+   
 
         // add
         private void btnAdd_Click_1(object sender, EventArgs e)

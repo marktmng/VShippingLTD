@@ -43,6 +43,7 @@
             this.customersTableAdapter2 = new VShippingLTD.VShippingdbDataSet2TableAdapters.CustomersTableAdapter();
             this.customersTableAdapter3 = new VShippingLTD.VShippingdbDataSet3TableAdapters.CustomersTableAdapter();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnExport = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnext = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -78,7 +79,6 @@
             this.txtCustomerID = new System.Windows.Forms.TextBox();
             this.lblCustomerID = new System.Windows.Forms.Label();
             this.customersTableAdapter4 = new VShippingLTD.VShippingdbDataSet5TableAdapters.CustomersTableAdapter();
-            this.btnExport = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vShippingdbDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource2)).BeginInit();
@@ -184,6 +184,18 @@
             this.panel1.Size = new System.Drawing.Size(1329, 580);
             this.panel1.TabIndex = 0;
             // 
+            // btnExport
+            // 
+            this.btnExport.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnExport.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
+            this.btnExport.Location = new System.Drawing.Point(446, 504);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(75, 36);
+            this.btnExport.TabIndex = 14;
+            this.btnExport.Text = "Export";
+            this.btnExport.UseVisualStyleBackColor = false;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
@@ -193,7 +205,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1329, 106);
+            this.panel2.Size = new System.Drawing.Size(1329, 98);
             this.panel2.TabIndex = 32;
             // 
             // btnext
@@ -204,7 +216,7 @@
             this.btnext.Location = new System.Drawing.Point(1231, 33);
             this.btnext.Name = "btnext";
             this.btnext.Size = new System.Drawing.Size(80, 32);
-            this.btnext.TabIndex = 35;
+            this.btnext.TabIndex = 16;
             this.btnext.Text = "&Close";
             this.btnext.UseVisualStyleBackColor = false;
             this.btnext.Click += new System.EventHandler(this.btnext_Click);
@@ -545,18 +557,6 @@
             // customersTableAdapter4
             // 
             this.customersTableAdapter4.ClearBeforeFill = true;
-            // 
-            // btnExport
-            // 
-            this.btnExport.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnExport.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
-            this.btnExport.Location = new System.Drawing.Point(446, 504);
-            this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(75, 36);
-            this.btnExport.TabIndex = 14;
-            this.btnExport.Text = "Export";
-            this.btnExport.UseVisualStyleBackColor = false;
-            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
             // CustomerMaintenanceForm
             // 

@@ -7,17 +7,17 @@ using VShippingLTD;
 
 namespace VShippingLTD
 {
-    public class ParcelManager
+    public class ParcelManager // Business Logic Layer: ParcelManager class responsible for managing parcels in the system
     {
-        private string connectionString; // connection
+        private string connectionString; // Encapsulation: Connection string for the database
 
         public ParcelManager()
         {
             connectionString = ConfigurationManager.ConnectionStrings["VShippingdbConnectionString"].ConnectionString;
         }
 
-
-        public DataTable GetParcels(string searchTerm = null)
+        // for searchTerm 
+        public DataTable GetParcels(string searchTerm = null) // Business Logic and Encapsulation: GetParcels method retrieves parcels from the database
         {
 
             using (SqlConnection connection = new SqlConnection(connectionString)) // opening database connection
@@ -47,6 +47,7 @@ namespace VShippingLTD
             }
         }
 
+
         // insert command
         public void InsertParcel(Parcel parcel)
         {
@@ -58,6 +59,7 @@ namespace VShippingLTD
                 {
                     command.CommandType = CommandType.StoredProcedure;
 
+                    // Business Logic: Adding parameters for the stored procedure
                     command.Parameters.Add(new SqlParameter("@ParcelID", parcel.ParcelID));
                     command.Parameters.Add(new SqlParameter("@CustomerID", parcel.CustomerID));
                     command.Parameters.Add(new SqlParameter("@ParcelName", parcel.ParcelName));
@@ -82,6 +84,7 @@ namespace VShippingLTD
                 {
                     command.CommandType = CommandType.StoredProcedure;
 
+                    // Business Logic: Adding parameters for the stored procedure
                     command.Parameters.Add(new SqlParameter("@ParcelID", parcel.ParcelID));
                     command.Parameters.Add(new SqlParameter("@CustomerID", parcel.CustomerID));
                     command.Parameters.Add(new SqlParameter("@ParcelName", parcel.ParcelName));
@@ -106,6 +109,7 @@ namespace VShippingLTD
                 {
                     command.CommandType = CommandType.StoredProcedure;
 
+                    // Business Logic: Adding parameters for the stored procedure
                     command.Parameters.Add(new SqlParameter("@ParcelID", parcelID));
 
                     command.ExecuteNonQuery();

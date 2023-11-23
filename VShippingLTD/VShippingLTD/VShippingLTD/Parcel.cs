@@ -7,6 +7,8 @@ using VShippingLTD;
 
 namespace VShippingLTD
 {
+
+    // class
     public class Parcel
     {
         // properties for parcel

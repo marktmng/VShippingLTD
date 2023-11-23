@@ -31,6 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ParcelEntryForm));
             this.Panel = new System.Windows.Forms.Panel();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.btnExport = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnext = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -64,8 +67,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.parcelsTableAdapter = new VShippingLTD.VShippingdbDataSet4TableAdapters.ParcelsTableAdapter();
-            this.btnExport = new System.Windows.Forms.Button();
-            this.btnSearch = new System.Windows.Forms.Button();
             this.Panel.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -79,6 +80,7 @@
             this.Panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.Panel.Controls.Add(this.txtSearch);
             this.Panel.Controls.Add(this.btnSearch);
             this.Panel.Controls.Add(this.btnExport);
             this.Panel.Controls.Add(this.panel1);
@@ -106,6 +108,37 @@
             this.Panel.Size = new System.Drawing.Size(1318, 580);
             this.Panel.TabIndex = 0;
             // 
+            // txtSearch
+            // 
+            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.txtSearch.Location = new System.Drawing.Point(36, 135);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(346, 24);
+            this.txtSearch.TabIndex = 1;
+            this.txtSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(391, 133);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(75, 27);
+            this.btnSearch.TabIndex = 2;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // btnExport
+            // 
+            this.btnExport.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnExport.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
+            this.btnExport.Location = new System.Drawing.Point(391, 524);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(75, 36);
+            this.btnExport.TabIndex = 14;
+            this.btnExport.Text = "Export";
+            this.btnExport.UseVisualStyleBackColor = false;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click_1);
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
@@ -126,7 +159,7 @@
             this.btnext.Location = new System.Drawing.Point(1206, 28);
             this.btnext.Name = "btnext";
             this.btnext.Size = new System.Drawing.Size(80, 32);
-            this.btnext.TabIndex = 5;
+            this.btnext.TabIndex = 16;
             this.btnext.Text = "&Close";
             this.btnext.UseVisualStyleBackColor = false;
             this.btnext.Click += new System.EventHandler(this.btnext_Click);
@@ -159,7 +192,7 @@
             this.btnDelete.Location = new System.Drawing.Point(297, 523);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(85, 37);
-            this.btnDelete.TabIndex = 11;
+            this.btnDelete.TabIndex = 13;
             this.btnDelete.Text = "Remove";
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -172,7 +205,7 @@
             this.btnClean.Location = new System.Drawing.Point(210, 523);
             this.btnClean.Name = "btnClean";
             this.btnClean.Size = new System.Drawing.Size(78, 37);
-            this.btnClean.TabIndex = 10;
+            this.btnClean.TabIndex = 12;
             this.btnClean.Text = "Clear";
             this.btnClean.UseVisualStyleBackColor = false;
             this.btnClean.Click += new System.EventHandler(this.btnClean_Click);
@@ -185,7 +218,7 @@
             this.btnUpd.Location = new System.Drawing.Point(123, 523);
             this.btnUpd.Name = "btnUpd";
             this.btnUpd.Size = new System.Drawing.Size(78, 37);
-            this.btnUpd.TabIndex = 9;
+            this.btnUpd.TabIndex = 11;
             this.btnUpd.Text = "Update";
             this.btnUpd.UseVisualStyleBackColor = false;
             this.btnUpd.Click += new System.EventHandler(this.btnUpd_Click);
@@ -198,7 +231,7 @@
             this.btnInsert.Location = new System.Drawing.Point(36, 523);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(78, 37);
-            this.btnInsert.TabIndex = 8;
+            this.btnInsert.TabIndex = 10;
             this.btnInsert.Text = "Add";
             this.btnInsert.UseVisualStyleBackColor = false;
             this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
@@ -226,7 +259,7 @@
             this.parceLDTGview.RowHeadersWidth = 51;
             this.parceLDTGview.RowTemplate.Height = 24;
             this.parceLDTGview.Size = new System.Drawing.Size(786, 433);
-            this.parceLDTGview.TabIndex = 14;
+            this.parceLDTGview.TabIndex = 15;
             this.parceLDTGview.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.parceLDTGview_CellContentClick);
             // 
             // parcelIDDataGridViewTextBoxColumn
@@ -302,7 +335,7 @@
             this.txtWeight.Location = new System.Drawing.Point(260, 454);
             this.txtWeight.Name = "txtWeight";
             this.txtWeight.Size = new System.Drawing.Size(206, 24);
-            this.txtWeight.TabIndex = 7;
+            this.txtWeight.TabIndex = 9;
             // 
             // txtAddress
             // 
@@ -311,7 +344,7 @@
             this.txtAddress.Location = new System.Drawing.Point(260, 408);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(206, 24);
-            this.txtAddress.TabIndex = 6;
+            this.txtAddress.TabIndex = 8;
             // 
             // txtPrice
             // 
@@ -320,7 +353,7 @@
             this.txtPrice.Location = new System.Drawing.Point(260, 362);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(206, 24);
-            this.txtPrice.TabIndex = 5;
+            this.txtPrice.TabIndex = 7;
             // 
             // txtParcelDes
             // 
@@ -329,7 +362,7 @@
             this.txtParcelDes.Location = new System.Drawing.Point(260, 316);
             this.txtParcelDes.Name = "txtParcelDes";
             this.txtParcelDes.Size = new System.Drawing.Size(206, 24);
-            this.txtParcelDes.TabIndex = 4;
+            this.txtParcelDes.TabIndex = 6;
             // 
             // txtParcelName
             // 
@@ -338,7 +371,7 @@
             this.txtParcelName.Location = new System.Drawing.Point(260, 270);
             this.txtParcelName.Name = "txtParcelName";
             this.txtParcelName.Size = new System.Drawing.Size(206, 24);
-            this.txtParcelName.TabIndex = 3;
+            this.txtParcelName.TabIndex = 5;
             // 
             // txtCustID
             // 
@@ -347,7 +380,7 @@
             this.txtCustID.Location = new System.Drawing.Point(260, 224);
             this.txtCustID.Name = "txtCustID";
             this.txtCustID.Size = new System.Drawing.Size(206, 24);
-            this.txtCustID.TabIndex = 2;
+            this.txtCustID.TabIndex = 4;
             // 
             // txtParcelID
             // 
@@ -356,7 +389,7 @@
             this.txtParcelID.Location = new System.Drawing.Point(260, 178);
             this.txtParcelID.Name = "txtParcelID";
             this.txtParcelID.Size = new System.Drawing.Size(206, 24);
-            this.txtParcelID.TabIndex = 1;
+            this.txtParcelID.TabIndex = 3;
             // 
             // label7
             // 
@@ -439,28 +472,6 @@
             // 
             this.parcelsTableAdapter.ClearBeforeFill = true;
             // 
-            // btnExport
-            // 
-            this.btnExport.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnExport.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
-            this.btnExport.Location = new System.Drawing.Point(391, 524);
-            this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(75, 36);
-            this.btnExport.TabIndex = 12;
-            this.btnExport.Text = "Export";
-            this.btnExport.UseVisualStyleBackColor = false;
-            this.btnExport.Click += new System.EventHandler(this.btnExport_Click_1);
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Location = new System.Drawing.Point(391, 133);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(75, 27);
-            this.btnSearch.TabIndex = 1;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
             // ParcelEntryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -524,5 +535,6 @@
         private System.Windows.Forms.Button btnext;
         private System.Windows.Forms.Button btnExport;
         private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.TextBox txtSearch;
     }
 }
