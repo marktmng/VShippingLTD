@@ -15,17 +15,18 @@ namespace VShippingLTD
 {
     public partial class CustomerMaintenanceForm : Form
     {
-        
+        private CustomerBLL customerBLL;
 
         public CustomerMaintenanceForm()
         {
             InitializeComponent();
+            customerBLL = new CustomerBLL();
         }
 
         private void CustomerMaintenanceForm_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'vShippingdbDataSet5.Customers' table. You can move, or remove it, as needed.
-            this.customersTableAdapter4.Fill(this.vShippingdbDataSet5.Customers); // latest
+            //this.customersTableAdapter4.Fill(this.vShippingdbDataSet5.Customers); // latest
             
             // Load data into the DataGridView
             RefreshDataGridView();
@@ -34,38 +35,8 @@ namespace VShippingLTD
         // Method to refresh the DataGridView
         private void RefreshDataGridView(string searchTerm = null)
         {
-            string cs = ConfigurationManager.ConnectionStrings["VShippingdbConnectionString"].ConnectionString;
-            using (SqlConnection objSqlConnection = new SqlConnection(cs))
-            {
-                try
-                {
-                    objSqlConnection.Open();
-                    string selectCommand = "SELECT * FROM Customers";
-
-                    if (!string.IsNullOrEmpty(searchTerm))
-                    {
-                        // Add a WHERE clause to filter by customer's first name or last name containing the search term.
-                        selectCommand += " WHERE FirstName LIKE @SearchTerm OR LastName LIKE @SearchTerm";
-                    }
-
-                    SqlCommand objSqlCommand = new SqlCommand(selectCommand, objSqlConnection);
-
-                    if (!string.IsNullOrEmpty(searchTerm))
-                    {
-                        // Add the search parameter if a search term is provided.
-                        objSqlCommand.Parameters.AddWithValue("@SearchTerm", "%" + searchTerm + "%");
-                    }
-
-                    SqlDataAdapter adapter = new SqlDataAdapter(objSqlCommand);
-                    DataTable dt = new DataTable();
-                    adapter.Fill(dt);
-                    cmDTGridView.DataSource = dt;
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error loading data: " + ex.Message);
-                }
-            }
+            DataTable dt = customerBLL.GetCustomers(searchTerm);
+            cmDTGridView.DataSource = dt;
         }
 
         // search
@@ -95,44 +66,22 @@ namespace VShippingLTD
         // add
         private void btnAdd_Click_1(object sender, EventArgs e)
         {
-            int customerId;
-            if (!int.TryParse(txtCustomerID.Text, out customerId))
+            bool success = customerBLL.AddCustomer(txtFirstName.Text, txtLastName.Text, txtEmail.Text, txtPhoneNumber.Text, txtReceiverName.Text, txtReceiverEmail.Text);
+
+            if (success)
             {
-                MessageBox.Show("Invalid Customer ID");
-                return; // Exit the method if the customer ID is invalid
-            }
-
-            string cs = ConfigurationManager.ConnectionStrings["VShippingdbConnectionString"].ConnectionString;
-            SqlConnection objSqlConnection = new SqlConnection(cs);
-            try
-            {
-                objSqlConnection.Open();
-                string InsertCommand = "INSERT INTO Customers VALUES ('" + txtFirstName.Text + "', '"
-                + txtLastName.Text + "', '"
-                + txtEmail.Text + "', '"
-                + txtPhoneNumber.Text + "','"
-                + txtReceiverName.Text + "', '"
-                + txtReceiverEmail.Text + "')";
-
-                SqlCommand objSqlCommand = new SqlCommand(InsertCommand, objSqlConnection);
-                objSqlCommand.ExecuteNonQuery();
-
                 MessageBox.Show("Successfully Added");
-
-                // After adding, refresh the DataGridView
                 RefreshDataGridView();
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Sorry Try Again" + ex.Message);
+                MessageBox.Show("Sorry, try again.");
             }
-            finally
-            {
-                objSqlConnection.Close();
-            }
+
             ClearControls();
         }
 
+        // datagridview
         private void cmDTGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             txtCustomerID.Text = cmDTGridView.Rows[e.RowIndex].Cells[0].FormattedValue.ToString(); // customerID is in the first column (index 0).
@@ -144,39 +93,8 @@ namespace VShippingLTD
             txtReceiverEmail.Text = cmDTGridView.Rows[e.RowIndex].Cells[6].FormattedValue.ToString(); //  Receiver Email is in the seventh column (index 6).
         }
 
-        //update
-        private void UpdateCustomer(int customerId, string firstName, string lastName, string email, string phoneNumber, string receiverName, string receiverEmail)
-        {
-            string cs = ConfigurationManager.ConnectionStrings["VShippingdbConnectionString"].ConnectionString;
-            using (SqlConnection objSqlConnection = new SqlConnection(cs))
-            {
-                try
-                {
-                    objSqlConnection.Open();
-                    string UpdateCommand = "UPDATE Customers SET FirstName = @FirstName, LastName = @LastName, Email = @Email, PhoneNumber = @PhoneNumber, ReceiverName = @ReceiverName, ReceiverEmail = @ReceiverEmail  WHERE CustomerID = @CustomerID";
-                    SqlCommand objSqlCommand = new SqlCommand(UpdateCommand, objSqlConnection);
-                    objSqlCommand.Parameters.AddWithValue("@CustomerID", customerId);
-                    objSqlCommand.Parameters.AddWithValue("@FirstName", firstName);
-                    objSqlCommand.Parameters.AddWithValue("@LastName", lastName);
-                    objSqlCommand.Parameters.AddWithValue("@Email", email);
-                    objSqlCommand.Parameters.AddWithValue("@PhoneNumber", phoneNumber);
-                    objSqlCommand.Parameters.AddWithValue("@ReceiverName", receiverName);
-                    objSqlCommand.Parameters.AddWithValue("@ReceiverEmail", receiverEmail);
-                    objSqlCommand.ExecuteNonQuery();
 
-                    MessageBox.Show("Successfully Updated");
-
-                    // After updating, refresh the DataGridView
-                    RefreshDataGridView();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Update failed: " + ex.Message);
-                }
-                ClearControls();
-            }
-        }
-
+        // update
         private void btnUpdate_Click_1(object sender, EventArgs e)
         {
             int customerId;
@@ -186,14 +104,19 @@ namespace VShippingLTD
                 return;
             }
 
-            string firstName = txtFirstName.Text;
-            string lastName = txtLastName.Text;
-            string email = txtEmail.Text;
-            string phoneNumber = txtPhoneNumber.Text;
-            string receiverName = txtReceiverName.Text;
-            string receiverEmail = txtReceiverEmail.Text;
+            bool success = customerBLL.UpdateCustomer(customerId, txtFirstName.Text, txtLastName.Text, txtEmail.Text, txtPhoneNumber.Text, txtReceiverName.Text, txtReceiverEmail.Text);
 
-            UpdateCustomer(customerId, firstName, lastName, email, phoneNumber, receiverName, receiverEmail);
+            if (success)
+            {
+                MessageBox.Show("Successfully Updated");
+                RefreshDataGridView();
+            }
+            else
+            {
+                MessageBox.Show("Update failed.");
+            }
+
+            ClearControls();
         }
 
         //delete
@@ -206,33 +129,19 @@ namespace VShippingLTD
                 return;
             }
 
-            string cs = ConfigurationManager.ConnectionStrings["VShippingdbConnectionString"].ConnectionString;
-            using (SqlConnection objSqlConnection = new SqlConnection(cs))
-            {
-                try
-                {
-                    objSqlConnection.Open();
-                    string DeleteCommand = "DELETE FROM Customers WHERE CustomerID = @CustomerID";
-                    SqlCommand objSqlCommand = new SqlCommand(DeleteCommand, objSqlConnection);
-                    objSqlCommand.Parameters.AddWithValue("@CustomerID", customerId);
-                    int rowsAffected = objSqlCommand.ExecuteNonQuery();
+            bool success = customerBLL.DeleteCustomer(customerId);
 
-                    if (rowsAffected > 0)
-                    {
-                        MessageBox.Show("Customer removed successfully");
-                        RefreshDataGridView(); // Refresh the DataGridView after removing a customer.
-                        ClearControls();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Customer with the specified ID does not exist.");
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error removing customer: " + ex.Message);
-                }
+            if (success)
+            {
+                MessageBox.Show("Customer removed successfully");
+                RefreshDataGridView();
             }
+            else
+            {
+                MessageBox.Show("Customer removal failed.");
+            }
+
+            ClearControls();
         }
 
         //clear
