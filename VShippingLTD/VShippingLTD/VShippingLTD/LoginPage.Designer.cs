@@ -42,7 +42,7 @@
             this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExit.BackColor = System.Drawing.Color.Red;
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Location = new System.Drawing.Point(751, 449);
+            this.btnExit.Location = new System.Drawing.Point(757, 483);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(69, 35);
             this.btnExit.TabIndex = 4;
@@ -54,7 +54,7 @@
             // 
             this.btnLogin.BackColor = System.Drawing.Color.PaleGreen;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(648, 449);
+            this.btnLogin.Location = new System.Drawing.Point(654, 483);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(69, 35);
             this.btnLogin.TabIndex = 3;
@@ -67,7 +67,7 @@
             this.txtPassword.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
-            this.txtPassword.Location = new System.Drawing.Point(682, 399);
+            this.txtPassword.Location = new System.Drawing.Point(682, 418);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '+';
             this.txtPassword.Size = new System.Drawing.Size(252, 22);
@@ -78,7 +78,7 @@
             this.txtUsername.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(682, 346);
+            this.txtUsername.Location = new System.Drawing.Point(682, 365);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(252, 22);
             this.txtUsername.TabIndex = 1;
@@ -91,7 +91,7 @@
             this.lblPassword.BackColor = System.Drawing.Color.Transparent;
             this.lblPassword.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPassword.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblPassword.Location = new System.Drawing.Point(545, 398);
+            this.lblPassword.Location = new System.Drawing.Point(545, 417);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(108, 27);
             this.lblPassword.TabIndex = 11;
@@ -105,7 +105,7 @@
             this.lblUsername.BackColor = System.Drawing.Color.Transparent;
             this.lblUsername.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsername.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblUsername.Location = new System.Drawing.Point(545, 340);
+            this.lblUsername.Location = new System.Drawing.Point(545, 359);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(115, 27);
             this.lblUsername.TabIndex = 12;

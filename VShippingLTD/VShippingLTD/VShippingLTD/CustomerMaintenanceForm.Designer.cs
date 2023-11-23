@@ -43,6 +43,7 @@
             this.customersTableAdapter2 = new VShippingLTD.VShippingdbDataSet2TableAdapters.CustomersTableAdapter();
             this.customersTableAdapter3 = new VShippingLTD.VShippingdbDataSet3TableAdapters.CustomersTableAdapter();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnExport = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnext = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -155,6 +156,7 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.btnExport);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.btnSearch);
             this.panel1.Controls.Add(this.txtSearch);
@@ -182,6 +184,19 @@
             this.panel1.Size = new System.Drawing.Size(1329, 580);
             this.panel1.TabIndex = 0;
             // 
+            // btnExport
+            // 
+            this.btnExport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnExport.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnExport.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
+            this.btnExport.Location = new System.Drawing.Point(446, 504);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(75, 36);
+            this.btnExport.TabIndex = 14;
+            this.btnExport.Text = "Export";
+            this.btnExport.UseVisualStyleBackColor = false;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
@@ -191,7 +206,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1329, 106);
+            this.panel2.Size = new System.Drawing.Size(1329, 98);
             this.panel2.TabIndex = 32;
             // 
             // btnext
@@ -202,7 +217,7 @@
             this.btnext.Location = new System.Drawing.Point(1231, 33);
             this.btnext.Name = "btnext";
             this.btnext.Size = new System.Drawing.Size(80, 32);
-            this.btnext.TabIndex = 35;
+            this.btnext.TabIndex = 16;
             this.btnext.Text = "&Close";
             this.btnext.UseVisualStyleBackColor = false;
             this.btnext.Click += new System.EventHandler(this.btnext_Click);
@@ -291,7 +306,7 @@
             this.btnRemove.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnRemove.BackColor = System.Drawing.Color.Red;
             this.btnRemove.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemove.Location = new System.Drawing.Point(423, 504);
+            this.btnRemove.Location = new System.Drawing.Point(334, 504);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(91, 37);
             this.btnRemove.TabIndex = 13;
@@ -304,7 +319,7 @@
             this.btnClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnClear.BackColor = System.Drawing.Color.PaleGreen;
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.Location = new System.Drawing.Point(307, 504);
+            this.btnClear.Location = new System.Drawing.Point(235, 504);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(78, 37);
             this.btnClear.TabIndex = 12;
@@ -317,7 +332,7 @@
             this.btnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnUpdate.BackColor = System.Drawing.Color.PaleGreen;
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Location = new System.Drawing.Point(191, 504);
+            this.btnUpdate.Location = new System.Drawing.Point(136, 504);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(78, 37);
             this.btnUpdate.TabIndex = 11;
@@ -330,7 +345,7 @@
             this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnAdd.BackColor = System.Drawing.Color.PaleGreen;
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(75, 504);
+            this.btnAdd.Location = new System.Drawing.Point(37, 504);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(78, 37);
             this.btnAdd.TabIndex = 10;
@@ -364,7 +379,7 @@
             this.cmDTGridView.RowHeadersWidth = 51;
             this.cmDTGridView.RowTemplate.Height = 24;
             this.cmDTGridView.Size = new System.Drawing.Size(749, 425);
-            this.cmDTGridView.TabIndex = 14;
+            this.cmDTGridView.TabIndex = 15;
             this.cmDTGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cmDTGridView_CellContentClick);
             // 
             // customerIDDataGridViewTextBoxColumn
@@ -626,5 +641,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label Title;
         private System.Windows.Forms.Button btnext;
+        private System.Windows.Forms.Button btnExport;
     }
 }

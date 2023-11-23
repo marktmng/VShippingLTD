@@ -10,14 +10,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using VShippingLTD;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace VShippingLTD
 {
     public partial class ParcelEntryForm : Form
     {
+        private ParcelManager parcelManager; // call the ParcelManager
+
         public ParcelEntryForm()
         {
             InitializeComponent();
+            parcelManager = new ParcelManager(); // declare new parcelManager
         }
 
         private void ParcelEntryForm_Load(object sender, EventArgs e)
@@ -41,34 +45,8 @@ namespace VShippingLTD
 
         private void RefreshDataGridView(string searchTerm = null)
         {
-            string con = ConfigurationManager.ConnectionStrings["VShippingdbConnectionString"].ConnectionString;
-            using (SqlConnection connection = new SqlConnection(con))
-            {
-                connection.Open();
-                string selectCommand = "SELECT * FROM Parcels";
-
-                if (!string.IsNullOrEmpty(searchTerm))
-                {
-                    // Add a WHERE clause to filter by parcel name or other criteria containing the search term.
-                    selectCommand += " WHERE ParcelName LIKE @SearchTerm";
-                }
-
-                using (SqlCommand command = new SqlCommand(selectCommand, connection))
-                {
-                    if (!string.IsNullOrEmpty(searchTerm))
-                    {
-                        // Add the search parameter if a search term is provided.
-                        command.Parameters.AddWithValue("@SearchTerm", "%" + searchTerm + "%");
-                    }
-
-                    using (SqlDataAdapter adapter = new SqlDataAdapter(command))
-                    {
-                        DataTable dataTable = new DataTable();
-                        adapter.Fill(dataTable);
-                        parceLDTGview.DataSource = dataTable;
-                    }
-                }
-            }
+            DataTable dataTable = parcelManager.GetParcels(searchTerm);
+            parceLDTGview.DataSource = dataTable;
         }
 
 
@@ -88,8 +66,7 @@ namespace VShippingLTD
             }
 
         }
-
-        // add 
+        // add
         private void btnInsert_Click(object sender, EventArgs e)
         {
             // Retrieve the values entered by the user from the text boxes
@@ -139,45 +116,16 @@ namespace VShippingLTD
             };
 
             // Call a method to insert the parcel into the database
-            InsertParcel(newParcel);
+            parcelManager.InsertParcel(newParcel);
 
             // Clear the text boxes after inserting the parcel
             ClearControls();
 
             // Refresh the DataGridView to display the newly added parcel
             RefreshDataGridView();
-        }
 
-        private void InsertParcel(Parcel parcel)
-        {
-            string con = ConfigurationManager.ConnectionStrings["VShippingdbConnectionString"].ConnectionString;
-            using (SqlConnection connection = new SqlConnection(con))
-            {
-                connection.Open();
-
-                using (SqlCommand command = new SqlCommand("spInsertParcel", connection))
-                {
-                    command.CommandType = CommandType.StoredProcedure;
-
-                    // Add the ParcelID parameter to the stored procedure
-                    command.Parameters.Add(new SqlParameter("@ParcelID", parcel.ParcelID));
-
-                    command.Parameters.Add(new SqlParameter("@CustomerID", parcel.CustomerID));
-                    command.Parameters.Add(new SqlParameter("@ParcelName", parcel.ParcelName));
-                    command.Parameters.Add(new SqlParameter("@ParcelDescription", parcel.ParcelDescription));
-                    command.Parameters.Add(new SqlParameter("@Price", parcel.Price));
-                    command.Parameters.Add(new SqlParameter("@Address", parcel.Address));
-                    command.Parameters.Add(new SqlParameter("@Weight", parcel.Weight));
-
-                    command.ExecuteNonQuery();
-                }
-            }
-
-        }
-
-        private void btnClean_Click(object sender, EventArgs e)
-        {
-            ClearControls();
+            // Display success message
+            MessageBox.Show("Parcel successfully Added!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         // update
@@ -230,41 +178,18 @@ namespace VShippingLTD
             };
 
             // Call a method to update the parcel in the database
-            UpdateParcel(updatedParcel);
+            parcelManager.UpdateParcel(updatedParcel);
 
             // Clear the text boxes after updating the parcel
-            ClearControls();
+            ClearControls(); //clear
+            RefreshDataGridView(); // refresh
 
-            // Refresh the DataGridView to display the updated parcel
-            RefreshDataGridView();
+
+            // Display success message
+            MessageBox.Show("Parcel successfully updated!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
         }
-
-        private void UpdateParcel(Parcel parcel)
-        {
-            string con = ConfigurationManager.ConnectionStrings["VShippingdbConnectionString"].ConnectionString;
-            using (SqlConnection connection = new SqlConnection(con))
-            {
-                connection.Open();
-
-                using (SqlCommand command = new SqlCommand("spUpdateParcel", connection))
-                {
-                    command.CommandType = CommandType.StoredProcedure;
-
-                    // Add the parameters needed for the update operation
-                    command.Parameters.Add(new SqlParameter("@ParcelID", parcel.ParcelID));
-                    command.Parameters.Add(new SqlParameter("@CustomerID", parcel.CustomerID));
-                    command.Parameters.Add(new SqlParameter("@ParcelName", parcel.ParcelName));
-                    command.Parameters.Add(new SqlParameter("@ParcelDescription", parcel.ParcelDescription));
-                    command.Parameters.Add(new SqlParameter("@Price", parcel.Price));
-                    command.Parameters.Add(new SqlParameter("@Address", parcel.Address));
-                    command.Parameters.Add(new SqlParameter("@Weight", parcel.Weight));
-
-                    // Execute the update command
-                    command.ExecuteNonQuery();
-                }
-            }
-        }
-
+        // delete
         private void btnDelete_Click(object sender, EventArgs e)
         {
             // Retrieve the ParcelID from the text box
@@ -275,39 +200,108 @@ namespace VShippingLTD
             }
 
             // Call a method to delete the parcel from the database
-            DeleteParcel(parcelID);
+            parcelManager.DeleteParcel(parcelID);
 
             // Clear the text boxes after deleting the parcel
             ClearControls();
 
             // Refresh the DataGridView to reflect the updated data after deletion
             RefreshDataGridView();
+
+            // Display success message
+            MessageBox.Show("Parcel successfully deleted!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
         }
 
-        private void DeleteParcel(int parcelID)
+
+        // clear
+        private void btnClean_Click(object sender, EventArgs e)
         {
-            string con = ConfigurationManager.ConnectionStrings["VShippingdbConnectionString"].ConnectionString;
-            using (SqlConnection connection = new SqlConnection(con))
-            {
-                connection.Open();
-
-                using (SqlCommand command = new SqlCommand("spDeleteParcel", connection))
-                {
-                    command.CommandType = CommandType.StoredProcedure;
-
-                    // Add the ParcelID parameter to the stored procedure for deletion
-                    command.Parameters.Add(new SqlParameter("@ParcelID", parcelID));
-
-                    // Execute the delete command
-                    command.ExecuteNonQuery();
-                }
-            }
-
+            ClearControls();
         }
+
 
         private void btnext_Click(object sender, EventArgs e)
         {
             this.Close(); // close this form
+        }
+
+        // export
+        private void ExportToExcel(DataGridView dataGridView, string filePath)
+        {
+            // create new excel application
+            Excel.Application excelApp = new Excel.Application();
+            excelApp.Visible = true;
+
+            // create workbook
+            Excel.Workbook workbook = excelApp.Workbooks.Add();
+            Excel.Worksheet worksheet = workbook.Sheets[1];
+
+            // copy column headers and make them bold
+            for (int j = 0; j < dataGridView.Columns.Count; j++)
+            {
+                worksheet.Cells[1, j + 1] = dataGridView.Columns[j].HeaderText; // provides each columns name
+                worksheet.Cells[1, j + 1].font.bold = true; // header names bold
+            }
+
+            // copy data from our dataGridView to Excel
+
+            for (int i = 0; i < dataGridView.Rows.Count; i++) // iterates through all rows
+            {
+                for (int j = 0; j < dataGridView.Columns.Count; j++) // iterates through every column for a specific rows
+                {
+                    // the argument to add the data from our DTG to excel
+                    worksheet.Cells[i + 2, j + 1] = dataGridView.Rows[i].Cells[j].Value;
+
+                }
+            }
+
+            // save the workbook
+            workbook.SaveAs(filePath);
+
+            // clean up our resources - optional
+            workbook.Close();
+            excelApp.Quit();
+            System.Runtime.InteropServices.Marshal.ReleaseComObject(excelApp);
+        }
+
+        // export button
+        private void btnExport_Click_1(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "Excel File|*.xlsx";
+
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string filePath = saveFileDialog.FileName;
+                ExportToExcel(parceLDTGview, filePath); // mentioned datagridview
+
+                MessageBox.Show("File Exported");
+            }
+        }
+
+        // button search
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string searchTerm = txtSearch.Text;
+            RefreshDataGridView(searchTerm);
+            ClearControls();
+        }
+
+        // expose search term
+        public string GetSearchTerm()
+        {
+            return txtSearch.Text;
+        }
+
+        public Button GetSearchButton()
+        {
+            return btnSearch;
+        }
+
+        public void ClearSearchBar()
+        {
+            txtSearch.Text = string.Empty;
         }
     }
 }
