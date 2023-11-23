@@ -34,6 +34,7 @@
             this.Lgn = new System.Windows.Forms.Button();
             this.btnext = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
+            this.btnClean = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.hmAnim)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,7 +68,7 @@
             this.Lgn.Location = new System.Drawing.Point(1338, 20);
             this.Lgn.Name = "Lgn";
             this.Lgn.Size = new System.Drawing.Size(76, 32);
-            this.Lgn.TabIndex = 3;
+            this.Lgn.TabIndex = 4;
             this.Lgn.Text = "&Login";
             this.Lgn.UseVisualStyleBackColor = false;
             this.Lgn.Click += new System.EventHandler(this.Lgn_Click);
@@ -80,7 +81,7 @@
             this.btnext.Location = new System.Drawing.Point(1420, 20);
             this.btnext.Name = "btnext";
             this.btnext.Size = new System.Drawing.Size(80, 32);
-            this.btnext.TabIndex = 4;
+            this.btnext.TabIndex = 5;
             this.btnext.Text = "Ex&it";
             this.btnext.UseVisualStyleBackColor = false;
             this.btnext.Click += new System.EventHandler(this.btnext_Click);
@@ -93,6 +94,17 @@
             this.btnSearch.TabIndex = 2;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // btnClean
+            // 
+            this.btnClean.Location = new System.Drawing.Point(910, 28);
+            this.btnClean.Name = "btnClean";
+            this.btnClean.Size = new System.Drawing.Size(75, 27);
+            this.btnClean.TabIndex = 3;
+            this.btnClean.Text = "Clear";
+            this.btnClean.UseVisualStyleBackColor = true;
+            this.btnClean.Click += new System.EventHandler(this.btnClean_Click);
             // 
             // HomeForm
             // 
@@ -102,6 +114,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1550, 849);
             this.ControlBox = false;
+            this.Controls.Add(this.btnClean);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnext);
             this.Controls.Add(this.Lgn);
@@ -124,5 +137,6 @@
         private System.Windows.Forms.Button Lgn;
         private System.Windows.Forms.Button btnext;
         private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Button btnClean;
     }
 }

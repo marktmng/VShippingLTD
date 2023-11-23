@@ -287,5 +287,21 @@ namespace VShippingLTD
             RefreshDataGridView(searchTerm);
             ClearControls();
         }
+
+        // expose search term
+        public string GetSearchTerm()
+        {
+            return txtSearch.Text;
+        }
+
+        public Button GetSearchButton()
+        {
+            return btnSearch;
+        }
+
+        public void ClearSearchBar()
+        {
+            txtSearch.Text = string.Empty;
+        }
     }
 }
